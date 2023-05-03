@@ -1,0 +1,238 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilos header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    z-index: 2;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px grey;
+    height: 80px;
+    top: 0;
+    padding: 0 12.5%;
+}
+
+#logo-header {
+    display: flex;
+    align-items: center;
+}
+
+#nombre-pizzeria {  
+    font-family: "komu-b", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+    text-decoration: none;
+    color: #232323;
+    margin-left: 0.5rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-menu.open{
+    height: auto;
+}
+
+header li a {
+    font-family: "brandon-grotesque", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    padding: 0 1.35rem;
+    color: #232323;
+}
+
+header li:hover{
+    transform: scale(1.05, 1.05);
+}
+
+header a:hover {
+    color: #c4122f;
+    font-weight: bold;
+}
+
+#reservas-header{
+    border: #c4122f solid 2px;
+    border-radius: 6px;
+    padding: 0.25rem 1rem;
+    margin-left: 1.35rem;
+}
+
+#toggle-header{
+    display: none;
+    cursor: pointer;
+}
+
+#toggle-header:active{
+    scale: 0.9;
+}
+
+/* Estilos footer */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #f3f2ef;
+    height: 175px;
+    padding: 0 12.5%;
+}
+
+.nav-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: "brandon-grotesque", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 0.9rem;
+    color: #202020;
+}
+
+.nav-footer ul{
+    display: block;
+}
+
+.nav-seguinos{
+    align-items: center;
+}
+
+#logo-footer {
+    display: flex;
+    align-items: center;
+}
+
+.nav-legales{
+    padding-bottom: 2.85rem;
+}
+
+footer li {
+    padding-top: 0.3rem;
+    font-family: "brandon-grotesque", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 0.9rem;
+}
+
+footer li a {
+    text-decoration: none;
+    color: #232323;
+}
+
+footer a:hover {
+    color: #c4122f;
+}
+
+.fa-brands:hover{
+    transform: scale(1.3, 1.3);
+}
+
+.fa-brands{
+    color: #db1d2d;
+    font-size: 17px;
+}
+
+.fa-solid{
+    color: #db1d2d;
+    font-size: 14px;
+}
+
+.nav-contacto span{
+    margin-left: 0.4rem;
+}
+
+.fa-location-dot{
+    margin-left: 0.15rem;
+}
+
+/* Estilos main */
+
+main{
+    height: 1500px;
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+    header {
+        padding: 0 3%;
+    }
+    footer{
+        padding: 0 3%;
+    }
+  }
+
+@media only screen and (max-width: 900px) {
+    .nav-menu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 85px;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: #f3f2ef;;
+        overflow: hidden;
+        transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    header nav li{
+        padding: 1rem 0;
+    }
+    #reservas-header{
+        border: #c4122f solid 0px;
+        padding: 0.25rem 3rem;
+        margin: 0;
+    }
+    header li a:hover{
+        background-color: #c4122f;
+        color: white;
+        border-radius: 6px;
+        padding: 0.25rem 3rem;
+    }
+    #toggle-header{
+        display: flex;
+    }
+    footer{
+        padding: 2rem 3%;
+        height: 300px;
+    }
+    #logo-footer {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+    }
+} 
+
+
+  @media only screen and (max-width: 450px) {
+    footer{
+        padding: 1.5rem 12.5%;
+        height: 300px;
+    }
+    #logo-footer {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+    }
+    .nav-legales{
+        width: 100%;
+        padding-bottom: 0;
+    }
+  }
