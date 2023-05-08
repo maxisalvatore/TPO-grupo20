@@ -568,15 +568,30 @@ footer a:hover {
     align-items: center;
   }
   #banner-home {
-    background-image: url(/image/banner-home-900.jpg);
+    background-image: url(../image/banner-home-900.jpg);
   }
 }
 
 @media only screen and (max-width: 650px) {
   #banner-home {
-    background-image: url(/image/banner-home-650.jpg);
+    background-image: url(../image/banner-home-650.jpg);
     align-items: flex-start;
     padding-top: 55px;
+  }
+  #seccion-app{
+    height: 500px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 30px;
+  }
+  #celular{
+    order: 2;
+    align-self: center;
+    margin-top: auto;
+  }
+  #descarga-app{
+    align-items: center;
   }
 }
 
