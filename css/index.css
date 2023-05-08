@@ -1,238 +1,598 @@
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 /* Estilos header */
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    z-index: 2;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0px 0px 10px grey;
-    height: 80px;
-    top: 0;
-    padding: 0 12.5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  z-index: 2;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 10px grey;
+  height: 80px;
+  top: 0;
+  padding: 0 12.5%;
 }
 
 #logo-header {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
-#nombre-pizzeria {  
-    font-family: "komu-b", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 3rem;
-    text-decoration: none;
-    color: #232323;
-    margin-left: 0.5rem;
+#nombre-pizzeria {
+  font-family: "komu-b", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3rem;
+  text-decoration: none;
+  color: #232323;
+  margin-left: 0.5rem;
 }
 
 nav ul {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
 }
 
-.nav-menu.open{
-    height: auto;
+.nav-menu.open {
+  height: auto;
 }
 
 header li a {
-    font-family: "brandon-grotesque", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    text-decoration: none;
-    padding: 0 1.35rem;
-    color: #232323;
+  font-family: "brandon-grotesque", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  padding: 0 1.35rem;
+  color: #232323;
 }
 
-header li:hover{
-    transform: scale(1.05, 1.05);
+header li:hover {
+  transform: scale(1.05, 1.05);
 }
 
 header a:hover {
-    color: #c4122f;
-    font-weight: bold;
+  color: #c4122f;
+  font-weight: bold;
 }
 
-#reservas-header{
-    border: #c4122f solid 2px;
-    border-radius: 6px;
-    padding: 0.25rem 1rem;
-    margin-left: 1.35rem;
+#reservas-header {
+  border: #c4122f solid 2px;
+  border-radius: 6px;
+  padding: 0.25rem 1rem;
+  margin-left: 1.35rem;
 }
 
-#toggle-header{
-    display: none;
-    cursor: pointer;
+#toggle-header {
+  display: none;
+  cursor: pointer;
 }
 
-#toggle-header:active{
-    scale: 0.9;
+#toggle-header:active {
+  scale: 0.9;
 }
 
 /* Estilos footer */
 
 footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    background-color: #f3f2ef;
-    height: 175px;
-    padding: 0 12.5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #f3f2ef;
+  height: 175px;
+  padding: 0 12.5%;
 }
 
 .nav-footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-wrap: wrap;
-    font-family: "brandon-grotesque", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 0.9rem;
-    color: #202020;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-family: "brandon-grotesque", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 0.9rem;
+  color: #202020;
 }
 
-.nav-footer ul{
-    display: block;
+.nav-footer ul {
+  display: block;
 }
 
-.nav-seguinos{
-    align-items: center;
+.nav-seguinos {
+  align-items: center;
 }
 
 #logo-footer {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
-.nav-legales{
-    padding-bottom: 3.2rem;
+.nav-legales {
+  padding-bottom: 3.2rem;
 }
 
 footer li {
-    padding-top: 0.3rem;
-    font-family: "brandon-grotesque", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 0.9rem;
+  padding-top: 0.3rem;
+  font-family: "brandon-grotesque", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 0.9rem;
 }
 
 footer li a {
-    text-decoration: none;
-    color: #232323;
+  text-decoration: none;
+  color: #232323;
 }
 
 footer a:hover {
-    color: #c4122f;
+  color: #c4122f;
 }
 
-.fa-brands:hover{
-    transform: scale(1.3, 1.3);
+.fa-brands:hover {
+  transform: scale(1.3, 1.3);
 }
 
-.fa-brands{
-    color: #db1d2d;
-    font-size: 17px;
+.fa-brands {
+  color: #db1d2d;
+  font-size: 17px;
 }
 
-.fa-solid{
-    color: #db1d2d;
-    font-size: 14px;
+.fa-solid {
+  color: #db1d2d;
+  font-size: 14px;
 }
 
-.nav-contacto span{
-    margin-left: 0.4rem;
+.nav-contacto span {
+  margin-left: 0.4rem;
 }
 
-.fa-location-dot{
-    margin-left: 0.15rem;
+.fa-location-dot {
+  margin-left: 0.15rem;
 }
 
-/* Estilos main */
+/* Estilos banner */
 
-main{
-    height: 1500px;
+#banner-home {
+  /* max-height: 670px; */
+  width: 100%;
+  min-height: 500px;
+  background-image: url(../image/banner-home.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 0 12.5%;
+  display: flex;
+  align-items: center;
+}
+
+#main-lookup h2 {
+  font-family: "komu-b", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 5rem;
+  color: white;
+}
+
+#main-lookup h3 {
+  font-family: "brandon-grotesque", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.15rem;
+  color: white;
+}
+
+#main-lookup h4 {
+  font-family: "brandon-grotesque", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1rem;
+  color: #ff0000;
+  background-color: #ffca0e;
+  text-align: center;
+  padding: 0.5rem 0;
+  margin-top: 1.15rem;
+  width: 164px;
+  border-radius: 6px;
+}
+
+#button-banner {
+  text-decoration: none;
+}
+
+#button-banner h4:active {
+  scale: 0.97;
+}
+
+#banner-home .fa-solid{
+  color: white;
+  font-size: 17px;
+}
+
+.fa-angles-left{
+  position: absolute;
+  left: 5%;
+}
+
+.fa-angles-right{
+  position: absolute;
+  right: 5%;
+}
+
+#slider-banner{
+  position: absolute;
+  right: 45%;
+  top: 550px;
+}
+
+.fa-circle{
+  margin: 0 0.25rem;
+}
+
+/* Sección Nuestras Pizzas */
+
+#nuestras-pizzas{
+  min-height: 1240px;
+  padding: 180px 12.5% 30px 12.5%;
+  text-align: center;
+}
+
+#nuestras-pizzas h2{
+  font-family: "league-gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3.5rem;
+  color: #232323;
+  position: relative;
+  bottom: 90px;
+}
+
+#nuestras-pizzas h2 span{
+  color: #f5101a;
+}
+
+#cards-pizzas{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 30px;
+  row-gap: 30px;
+}
+
+#cards-pizzas article{
+    border-radius: 6px;
+    background-color: rgb(243, 242, 239);
+    box-shadow: 0px 5px 14.55px 0.45px rgba(0, 0, 0, 0.2);
+    width: 332px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 7px;
+}
+
+#cards-pizzas .pizzas-sin-nuevo{
+  padding-top: 41px;
+}
+
+#cards-pizzas article h3{
+  font-family: "league-gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+  height: 25px;
+}
+
+#cards-pizzas article h4{
+  font-family: "brandon-grotesque", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1rem;
+  border: rgb(221, 36, 47) solid 2px;
+  border-radius: 8px;
+  padding: 0 1rem;
+}
+
+#cards-pizzas article a{
+  text-decoration: none;
+}
+
+#cards-pizzas article #borde-nuevo{
+  align-self: flex-start;
+  margin-left: 15px;
+}
+
+#cards-pizzas article #button-pedir{
+  color: white;
+  background-color: #ec333b;
+  padding: 0 1.8rem;
+}
+
+#cards-pizzas article p{
+  font-family: "brandon-grotesque", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1rem;
+}
+
+#cards-pizzas article img{
+  height: 284px;
+  width: 284px;
+}
+
+/* Seccion App */
+
+#seccion-app{
+  background-color: #f3f2ef;
+  height: 300px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#descarga-app{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#descarga-app h2{
+  font-family: "league-gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3.5rem;
+  color: #232323;
+}
+
+#descarga-app h2 span{
+  font-family: "league-gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3.5rem;
+  color: #f5101a;
+}
+
+#descarga-app h3{
+  font-family: "league-gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.4rem;
+  color: #232323;
+}
+
+#descarga-app h4{
+  font-family: "brandon-grotesque", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 0.95rem;
+  color: #000000;
+}
+
+#button-app{
+  margin-top: 0.5rem;
+}
+
+#descargar-apple{
+  margin-right: 0.5rem;
+}
+
+#celular{
+  height: 280px;
+  align-self: flex-end;
+}
+
+/* Sección Nuestras Sucursales */
+
+#nuestras-sucursales{
+  min-height: 1240px;
+  padding: 180px 12.5% 30px 12.5%;
+  text-align: center;
+}
+
+#nuestras-sucursales h2{
+  font-family: "league-gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3.5rem;
+  color: #232323;
+  position: relative;
+  bottom: 90px;
+}
+
+#nuestras-sucursales h2 span{
+  color: #f5101a;
+}
+
+#cards-sucursales{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 30px;
+  row-gap: 30px;
+}
+
+#cards-sucursales article{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 6px;
+    background-color: rgb(243, 242, 239);
+    box-shadow: 0px 5px 14.55px 0.45px rgba(0, 0, 0, 0.2);
+    min-width: 332px;
+    min-height: 500px;
+    padding-bottom: 20px;
+}
+
+#card-ayacucho{
+  background-image: url(../image/sucursal_ayacucho.jpg);
+}
+
+#card-cabildo{
+  background-image: url(../image/sucursal_cabildo.jpg);
+}
+
+#card-dorrego{
+  background-image: url(../image/sucursal_dorrego.jpg);
+}
+
+#card-guemes{
+  background-image: url(../image/sucursal_guemes.jpg);
+}
+
+#card-pacheco{
+  background-image: url(../image/sucursal_pacheco.jpg);
+}
+
+#card-pueyrredon{
+  background-image: url(../image/sucursal_pueyrredon.jpg);
+}
+
+#card-sarmiento{
+  background-image: url(../image/sucursal_sarmiento.jpg);
+}
+
+#card-zeballos{
+  background-image: url(../image/sucursal_zeballos.jpg);
+}
+
+#cards-sucursales article h3{
+  font-family: "league-gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 0.3rem;
+}
+
+#cards-sucursales article #button-info{
+  font-family: "brandon-grotesque", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1rem;
+  color: white;
+  background-color: #ec333b;
+  border: rgb(221, 36, 47) solid 2px;
+  border-radius: 8px;
+  padding: 0 1.2rem;
+  margin-top: 0.4rem;
+}
+
+#cards-sucursales article p{
+  font-family: "brandon-grotesque", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 0.2rem;
 }
 
 
+
+
+
+/* Media query */
+
+@media only screen and (max-width: 1410px){
+  #nuestras-pizzas{
+    padding: 180px 3% 30px 3%;
+  }
+  #nuestras-sucursales{
+    padding: 180px 3% 30px 3%;
+  }
+}
 
 @media only screen and (max-width: 1200px) {
-    header {
-        padding: 0 3%;
-    }
-    footer{
-        padding: 0 3%;
-    }
+  header {
+    padding: 0 3%;
   }
+  footer {
+    padding: 0 3%;
+  }
+  #banner-home {
+    padding: 0 3%;
+  }
+  .fa-angles-right, .fa-angles-left{
+    display: none;
+  }
+}
 
 @media only screen and (max-width: 900px) {
-    .nav-menu{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: absolute;
-        top: 85px;
-        left: 0;
-        width: 100%;
-        height: 0;
-        background: #f3f2ef;;
-        overflow: hidden;
-        transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-    header nav li{
-        padding: 1rem 0;
-    }
-    #reservas-header{
-        border: #c4122f solid 0px;
-        padding: 0.25rem 3rem;
-        margin: 0;
-    }
-    header li a:hover{
-        background-color: #c4122f;
-        color: white;
-        border-radius: 6px;
-        padding: 0.25rem 3rem;
-    }
-    #toggle-header{
-        display: flex;
-    }
-    footer{
-        padding: 2rem 3%;
-        height: 300px;
-    }
-    #logo-footer {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        align-items: center;
-    }
-} 
-
-
-  @media only screen and (max-width: 450px) {
-    footer{
-        padding: 1.5rem 12.5%;
-        height: 300px;
-    }
-    #logo-footer {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        align-items: center;
-    }
-    .nav-legales{
-        width: 100%;
-        padding-bottom: 0;
-    }
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: #f3f2ef;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
+  header nav li {
+    padding: 1rem 0;
+  }
+  #reservas-header {
+    border: #c4122f solid 0px;
+    padding: 0.25rem 3rem;
+    margin: 0;
+  }
+  header li a:hover {
+    background-color: #c4122f;
+    color: white;
+    border-radius: 6px;
+    padding: 0.25rem 3rem;
+  }
+  #toggle-header {
+    display: flex;
+  }
+  footer {
+    padding: 2rem 3%;
+    height: 300px;
+  }
+  #logo-footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+  }
+  #banner-home {
+    background-image: url(/image/banner-home-900.jpg);
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  #banner-home {
+    background-image: url(/image/banner-home-650.jpg);
+    align-items: flex-start;
+    padding-top: 55px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  footer {
+    padding: 1.5rem 12.5%;
+    height: 300px;
+  }
+  #logo-footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+  }
+  .nav-legales {
+    width: 100%;
+    padding-bottom: 0;
+  }
+}

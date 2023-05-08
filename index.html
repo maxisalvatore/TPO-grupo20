@@ -1,73 +1,234 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Link css -->
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index.css" />
     <!-- Favicon -->
-    <link rel="icon" href="./image/favicon_pizzeria.ico" type="image/x-icon">
+    <link rel="icon" href="image/favicons.ico" type="image/x-icon" />
     <!-- Tipografía Adobe Fonts -->
-    <link rel="stylesheet" href="https://use.typekit.net/kex2fts.css">
+    <link rel="stylesheet" href="https://use.typekit.net/kex2fts.css" />
     <!-- Íconos Fontawesome -->
-    <script src="https://kit.fontawesome.com/9558700994.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/9558700994.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Pizzeria</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <section id="logo-header">
-            <img src="./image/logo_pizzeria.png" alt="logo pizzeria">
-            <h1> <a href="/index.html" id="nombre-pizzeria">Nombre</a> </h1>
-        </section>
-        <nav>
-            <ul class="nav-menu">
-                <li> <a href="./index.html"> HOME </a> </li>
-                <li> <a href="./index.html"> MENÚ </a> </li>
-                <li> <a href="./index.html"> LOCALES </a> </li>
-                <li> <a href="./about.html"> SOBRE NOSOTROS </a> </li>
-                <li> <a href="./index.html" id="reservas-header"> RESERVAS </a> </li>
-            </ul>
-            <img src="./image/toggle_header.png" alt="" id="toggle-header">
-        </nav>
+      <section id="logo-header">
+        <img src="image/logo_pizzeria.png" alt="logo pizzeria" />
+        <h1><a href="/index.html" id="nombre-pizzeria">Nombre</a></h1>
+      </section>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="./index.html"> HOME </a></li>
+          <li><a href="./menu.html"> MENÚ </a></li>
+          <li><a href="./sucursales.html"> SUCURSALES </a></li>
+          <li><a href="./about.html"> SOBRE NOSOTROS </a></li>
+          <li><a href="./reservas.html" id="reservas-header"> RESERVAS </a></li>
+        </ul>
+        <img src="./image/toggle_header.png" alt="" id="toggle-header" />
+      </nav>
     </header>
 
     <main>
-        
+      <section id="banner-home">
+        <i class="fa-solid fa-angles-left"></i>
+        <article id="main-lookup">
+          <h3>NUEVA!</h3>
+          <h2>PROVOLONE</h2>
+          <h3>PIZZAS AL CARBÓN</h3>
+          <a href="" id="button-banner"><h4>PEDIR AHORA</h4></a>
+        </article>
+        <i class="fa-solid fa-angles-right"></i>
+        <section id="slider-banner">     
+          <i class="fa-solid fa-circle"></i>
+          <i class="fa-solid fa-circle"></i>
+          <i class="fa-solid fa-circle"></i>
+        </section>   
+      </section>
+
+      <section id="nuestras-pizzas">
+        <h2> NUESTRAS <span>PIZZAS</span> </h2>
+        <section id="cards-pizzas">
+          <article>
+            <h4 id="borde-nuevo">NUEVA!</h4>
+            <img src="image/pizza_moderna.png">
+            <h3>MODERNA</h3>
+            <p>Salsa, muzza, rúcula, jamón crudo, tomates deshidratados, parmesano</p>
+            <a href=""> <h4 id="button-pedir">PEDIR</h4> </a>
+          </article>
+          <article>
+            <h4 id="borde-nuevo">NUEVA!</h4>
+            <img src="image/pizza_vegetariana.png" alt="">
+            <h3>VEGETARIANA</h3>
+            <p>Salsa, muzza, berenjena asada, tomates cherrys, aceitunas y hojas de albahaca</p>
+            <a href=""> <h4 id="button-pedir">PEDIR</h4> </a>
+          </article>
+          <article class="pizzas-sin-nuevo">
+            <img src="image/pizza_napolitana.png" alt="">
+            <h3>NAPOLITANA</h3>
+            <p>Salsa, muzza, rodajas de tomate natural, aceite de oliva, ajo y orégano</p>
+            <a href=""> <h4 id="button-pedir">PEDIR</h4> </a>
+          </article>
+          <article class="pizzas-sin-nuevo">
+            <img src="image/pizza_calabresa.png" alt="">
+            <h3>CALABRESA</h3>
+            <p>Salsa, muzza, longaniza a la calabresa, morrones, aceitunas verdes y orégano</p>
+            <a href=""> <h4 id="button-pedir">PEDIR</h4> </a>
+          </article>
+          <article class="pizzas-sin-nuevo">
+            <img src="image/pizza_doblemuzza.png" alt="">
+            <h3>MUZZARELLA</h3>
+            <p>Salsa de tomate, muzzarella, aceitunas verdes y orégano</p>
+            <a href=""> <h4 id="button-pedir">PEDIR</h4> </a>
+          </article>
+          <article class="pizzas-sin-nuevo">
+            <img src="image/pizza_rucula.png" alt="">
+            <h3>RÚCULA</h3>
+            <p>Salsa, muzza, rúcula, tomates secos hidratados, aceitunas verdes y orégano</p>
+            <a href=""> <h4 id="button-pedir">PEDIR</h4> </a>
+          </article>
+          <article class="pizzas-sin-nuevo">
+            <img src="image/pizza_jamon.png" alt="">
+            <h3>JAMÓN</h3>
+            <p>Salsa, muzza, jamón cocido, aceitunas verdes y orégano</p>
+            <a href=""> <h4 id="button-pedir">PEDIR</h4> </a>
+          </article>
+          <article class="pizzas-sin-nuevo">
+            <img src="image/pizza_fugazzeta.png" alt="">
+            <h3>FUGAZZETA</h3>
+            <p>Salsa, muzza, cebolla, aceite de oliva, pimienta y orégano</p>
+            <a href=""> <h4 id="button-pedir">PEDIR</h4> </a>
+          </article>
+        </section>
+      </section>
+
+      <section id="seccion-app">
+        <img src="image/celular_app_home.png" alt="" id="celular">
+        <section id="descarga-app">
+          <h2>DESCARGÁ LA <span>APP</span> </h2>
+          <h3>Hacé tus pedidos y disfrutá de cupones</h3>
+          <h4>Puedes descargar la app de "Nombre" en:</h4>
+          <section id="button-app">
+            <a href="https://www.apple.com/la/app-store/" target="_blank"> <img src="image/descargar_app-apple.png" alt="" id="descargar-apple"> </a>
+            <a href="https://play.google.com/store/apps" target="_blank"> <img src="image/descargar_app-google.png" alt=""> </a>
+          </section>
+        </section>
+      </section>
+
+      <section id="nuestras-sucursales">
+        <h2>NUESTRAS <span>SUCURSALES</span> </h2>
+        <section id="cards-sucursales">
+          <article id="card-ayacucho">
+            <h3>AYACUCHO 437</h3>
+            <p>Lun a Sab: 09:00 a 23:00</p>
+            <p>Dom: 19:00 a 23:00</p>            
+            <h4 id="button-info">MÁS INFO</h4>
+          </article>
+          <article id="card-cabildo">
+            <h3>CABILDO 3938</h3>
+            <p>Lun a Dom: 10:00 a 23:00</p>
+            <p>Dom: 19:00 a 23:00</p>            
+            <h4 id="button-info">MÁS INFO</h4>
+          </article>
+          <article id="card-dorrego">
+            <h3>DORREGO 875</h3>
+            <p>Lun a Vie: 11:00 a 22:00</p>
+            <p>Sab y Dom: 12:00 a 22:00</p>            
+            <h4 id="button-info">MÁS INFO</h4>
+          </article>
+          <article id="card-guemes">
+            <h3>GUEMES 3965</h3>
+            <p>Lun a Sab: 09:00 a 24:00</p>
+            <p>Dom: 10:00 a 24:00</p>            
+            <h4 id="button-info">MÁS INFO</h4>
+          </article>
+          <article id="card-pacheco">
+            <h3>PACHECO 2228</h3>
+            <p>Lun a Jue: 10:00 a 23:30</p>
+            <p>Vie y Sab: 10:00 a 00:30</p>            
+            <h4 id="button-info">MÁS INFO</h4>
+          </article>
+          <article id="card-pueyrredon">
+            <h3>PUEYRREDÓN 1224 </h3>
+            <p>Lun a Sab: 12:00 a 22:30</p>
+            <p>Dom: 19:00 a 23:30</p>            
+            <h4 id="button-info">MÁS INFO</h4>
+          </article>
+          <article id="card-sarmiento">
+            <h3>SARMIENTO 745</h3>
+            <p>Lun a Sab: 09:00 a 23:00</p>
+            <p>Dom: 19:00 a 23:00</p>            
+            <h4 id="button-info">MÁS INFO</h4>
+          </article>
+          <article id="card-zeballos">
+            <h3>ZEBALLOS 1046</h3>
+            <p>Lun a Sab: 09:00 a 23:00</p>
+            <p>Dom: 19:00 a 23:00</p>            
+            <h4 id="button-info">MÁS INFO</h4>
+          </article>
+        </section>
+      </section>
     </main>
 
     <footer>
-        <section id="logo-footer">
-            <img src="./image/logo_pizzeria.png" alt="logo pizzeria" id="logo">
-            <h1> <a href="./index.html" id="nombre-pizzeria">Nombre</a> </h1>
-        </section>
-       
-        <nav class="nav-footer nav-contacto">
-            <h3>CONTACTO</h3>
-            <ul>
-                <li> <i class="fa-solid fa-location-dot"></i> <span> Dirección, Buenos Aires </span> </li>
-                <li> <i class="fa-solid fa-envelope"></i> <span> mail@google.com </span> </li>
-                <li> <i class="fa-solid fa-phone"></i> <span> 1144556677 </span> </li>
-            </ul>
-        </nav>
+      <section id="logo-footer">
+        <img src="./image/logo_pizzeria.png" alt="logo pizzeria" id="logo" />
+        <h1><a href="./index.html" id="nombre-pizzeria">Nombre</a></h1>
+      </section>
 
-        <nav class="nav-footer nav-seguinos">
-            <h3>SEGUINOS</h3>
-            <ul>
-                <li> <a href="https://www.facebook.com/" target="_blank"> <i class="fa-brands fa-facebook"></i> </a> </li>
-                <li> <a href="https://www.instagram.com/" target="_blank"> <i class="fa-brands fa-square-instagram"></i> </a> </li>
-                <li> <a href="https://twitter.com/" target="_blank"> <i class="fa-brands fa-twitter"></i> </a> </li>
-            </ul>
-        </nav>
+      <nav class="nav-footer nav-contacto">
+        <h3>CONTACTO</h3>
+        <ul>
+          <li>
+            <i class="fa-solid fa-location-dot"></i>
+            <span> Dirección, Buenos Aires </span>
+          </li>
+          <li>
+            <i class="fa-solid fa-envelope"></i> <span> mail@google.com </span>
+          </li>
+          <li><i class="fa-solid fa-phone"></i> <span> 1144556677 </span></li>
+        </ul>
+      </nav>
 
-        <nav class="nav-footer nav-legales">
-            <h3>LEGALES</h3>
-            <ul>
-                <li> <a href="./index.html"> <i class="fa-solid fa-angle-right"></i> Términos y Condiciones </a> </li>
-            </ul>
-        </nav>       
+      <nav class="nav-footer nav-seguinos">
+        <h3>SEGUINOS</h3>
+        <ul>
+          <li>
+            <a href="https://www.facebook.com/" target="_blank">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/" target="_blank">
+              <i class="fa-brands fa-square-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/" target="_blank">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="nav-footer nav-legales">
+        <h3>LEGALES</h3>
+        <ul>
+          <li>
+            <a href="./index.html">
+              <i class="fa-solid fa-angle-right"></i> Términos y Condiciones
+            </a>
+          </li>
+        </ul>
+      </nav>
     </footer>
 
     <script src="./js/index.js"></script>
-</body>
+  </body>
 </html>
