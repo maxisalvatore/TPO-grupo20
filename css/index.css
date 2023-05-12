@@ -4,6 +4,10 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Estilos header */
 
 header {
@@ -161,17 +165,63 @@ footer a:hover {
 
 /* Estilos banner */
 
-#banner-home {
-  /* max-height: 670px; */
+.contenedor-carousel{
   width: 100%;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.contenedor-carousel .carousel {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 300%;
+  transition: all 0.8s ease-in-out;
+  transform: translateX(0%);
+  scroll-behavior: smooth;
+}
+
+#banner-home {
+  width: calc( 100% / 3);
   min-height: 500px;
   background-image: url(../image/banner-home.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding: 0 12.5%;
+  padding: 0 4.166%;
   display: flex;
   align-items: center;
+  transition: all 0.4s ease;
+}
+
+#banner-home2 {
+  width: calc( 100% / 3);
+  min-height: 500px;
+  background-image: url(../image/banner-home2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 0 4.166%;
+  display: flex;
+  align-items: center;
+}
+
+#banner-home3 {
+  width: calc( 100% / 3);
+  min-height: 500px;
+  background-image: url(../image/banner-home3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 0 4.166%;
+  display: flex;
+  align-items: center;
+}
+
+.main-lookup-animation{
+  animation: bounceInLeft;
+  animation-duration: 1.5s;
 }
 
 #main-lookup h2 {
@@ -192,7 +242,7 @@ footer a:hover {
 
 #main-lookup h4 {
   font-family: "brandon-grotesque", sans-serif;
-  font-weight: 500;
+  font-weight: 700;
   font-style: normal;
   font-size: 1rem;
   color: #ff0000;
@@ -204,6 +254,14 @@ footer a:hover {
   border-radius: 6px;
 }
 
+#banner-home2 #main-lookup h4 {
+  color: #44720d;
+}
+
+#banner-home3 #main-lookup h4 {
+  color: #a23000;
+}
+
 #button-banner {
   text-decoration: none;
 }
@@ -212,19 +270,22 @@ footer a:hover {
   scale: 0.97;
 }
 
-#banner-home .fa-solid{
+.contenedor-carousel .fa-solid{
   color: white;
   font-size: 17px;
+  cursor: pointer;
 }
 
 .fa-angles-left{
   position: absolute;
   left: 5%;
+  top: 320px;
 }
 
 .fa-angles-right{
   position: absolute;
   right: 5%;
+  top: 320px;
 }
 
 #slider-banner{
@@ -233,8 +294,23 @@ footer a:hover {
   top: 550px;
 }
 
+.contenedor-carousel button{
+  background: none;
+	border: none;
+}
+
 .fa-circle{
   margin: 0 0.25rem;
+}
+
+.punto{
+  transition: all 0.4s ease;
+  border-radius: 1em;
+  box-shadow: 2px 2px 8px 0.2px rgba(0, 0, 0, 0.9);
+}
+
+.contenedor-carousel .activo {
+  color: rgb(255, 0, 0);
 }
 
 /* Sección Nuestras Pizzas */
@@ -278,7 +354,14 @@ footer a:hover {
     justify-content: space-evenly;
     align-items: center;
     padding-bottom: 7px;
+    transition: 0.6s;
 }
+
+#cards-pizzas article:hover{
+  scale: 1.03;
+  box-shadow: 0px 3px 14.55px 0.45px rgba(0, 0, 0, 0.3);
+}
+
 
 #cards-pizzas .pizzas-sin-nuevo{
   padding-top: 41px;
@@ -431,39 +514,109 @@ footer a:hover {
     min-width: 332px;
     min-height: 500px;
     padding-bottom: 20px;
+    transition: 0.6s;
+}
+
+#cards-sucursales article:hover{
+  scale: 1.03;
+  box-shadow: 0px 3px 14.55px 0.45px rgba(0, 0, 0, 0.6);
 }
 
 #card-ayacucho{
   background-image: url(../image/sucursal_ayacucho.jpg);
+  opacity: 0.85;
+  background-size: 360px;
+}
+
+#card-ayacucho:hover{
+  background-image: url(../image/sucursal_ayacucho.jpg);
+  opacity: 1;
+  background-size: 340px;
 }
 
 #card-cabildo{
   background-image: url(../image/sucursal_cabildo.jpg);
+  opacity: 0.85;
+  background-size: 360px;
+}
+
+#card-cabildo:hover{
+  background-image: url(../image/sucursal_cabildo.jpg);
+  opacity: 1;
+  background-size: 340px;
 }
 
 #card-dorrego{
   background-image: url(../image/sucursal_dorrego.jpg);
+  opacity: 0.85;
+  background-size: 360px;
+}
+
+#card-dorrego:hover{
+  background-image: url(../image/sucursal_dorrego.jpg);
+  opacity: 1;
+  background-size: 340px;
 }
 
 #card-guemes{
   background-image: url(../image/sucursal_guemes.jpg);
+  opacity: 0.85;
+  background-size: 360px;
+}
+
+#card-guemes:hover{
+  background-image: url(../image/sucursal_guemes.jpg);
+  opacity: 1;
+  background-size: 340px;
 }
 
 #card-pacheco{
   background-image: url(../image/sucursal_pacheco.jpg);
+  opacity: 0.85;
+  background-size: 360px;
+}
+
+#card-pacheco:hover{
+  background-image: url(../image/sucursal_pacheco.jpg);
+  opacity: 1;
+  background-size: 340px;
 }
 
 #card-pueyrredon{
   background-image: url(../image/sucursal_pueyrredon.jpg);
+  opacity: 0.85;
+  background-size: 360px;
+}
+
+#card-pueyrredon:hover{
+  background-image: url(../image/sucursal_pueyrredon.jpg);
+  opacity: 1;
+  background-size: 340px;
 }
 
 #card-sarmiento{
   background-image: url(../image/sucursal_sarmiento.jpg);
+  opacity: 0.85;
+  background-size: 360px;
+}
+
+#card-sarmiento:hover{
+  background-image: url(../image/sucursal_sarmiento.jpg);
+  opacity: 1;
+  background-size: 340px;
 }
 
 #card-zeballos{
   background-image: url(../image/sucursal_zeballos.jpg);
+  opacity: 0.85;
+  background-size: 360px;
 }
+
+#card-zeballos:hover{
+  background-image: url(../image/sucursal_zeballos.jpg);
+  opacity: 1;
+  background-size: 340px;
+} 
 
 #cards-sucursales article h3{
   font-family: "league-gothic", sans-serif;
@@ -496,7 +649,9 @@ footer a:hover {
   margin-bottom: 0.2rem;
 }
 
-
+#cards-sucursales article a{
+  text-decoration: none;
+}
 
 
 
@@ -518,11 +673,12 @@ footer a:hover {
   footer {
     padding: 0 3%;
   }
-  #banner-home {
-    padding: 0 3%;
+  #banner-home, #banner-home2, #banner-home3 {
+    padding: 0 1%;
   }
-  .fa-angles-right, .fa-angles-left{
+  .flechas-banner{
     display: none;
+    visibility: hidden;
   }
 }
 
@@ -570,11 +726,27 @@ footer a:hover {
   #banner-home {
     background-image: url(../image/banner-home-900.jpg);
   }
+  #banner-home2 {
+    background-image: url(../image/banner-home2-900.jpg);
+  }
+  #banner-home3 {
+    background-image: url(../image/banner-home3-900.jpg);
+  }
 }
 
 @media only screen and (max-width: 650px) {
   #banner-home {
     background-image: url(../image/banner-home-650.jpg);
+    align-items: flex-start;
+    padding-top: 55px;
+  }
+  #banner-home2 {
+    background-image: url(../image/banner-home2-650.jpg);
+    align-items: flex-start;
+    padding-top: 55px;
+  }
+  #banner-home3 {
+    background-image: url(../image/banner-home3-650.jpg);
     align-items: flex-start;
     padding-top: 55px;
   }

@@ -10,6 +10,8 @@
     <link rel="icon" href="image/favicons.ico" type="image/x-icon" />
     <!-- Tipografía Adobe Fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/kex2fts.css" />
+    <!-- Animaciones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- Íconos Fontawesome -->
     <script
       src="https://kit.fontawesome.com/9558700994.js"
@@ -21,7 +23,7 @@
     <header>
       <section id="logo-header">
         <img src="image/logo_pizzeria.png" alt="logo pizzeria" />
-        <h1><a href="/index.html" id="nombre-pizzeria">Nombre</a></h1>
+        <h1><a href="/index.html" id="nombre-pizzeria">NOMBRE</a></h1>
       </section>
       <nav>
         <ul class="nav-menu">
@@ -36,47 +38,67 @@
     </header>
 
     <main>
-      <section id="banner-home">
-        <i class="fa-solid fa-angles-left"></i>
-        <article id="main-lookup">
-          <h3>NUEVA!</h3>
-          <h2>PROVOLONE</h2>
+      <section class="contenedor-carousel">
+        <section class="carousel">
+          <section id="banner-home">
+              <article id="main-lookup" class="main-lookup-animation">
+              <h3>NUEVA!</h3>
+              <h2>PEPPERONI</h2>
+              <h3>PIZZAS AL CARBÓN</h3>
+              <a href="" id="button-banner"><h4>PEDIR AHORA</h4></a>
+            </article>
+          </section>
+          <section id="banner-home2">
+            <article id="main-lookup">
+            <h3>NUEVA!</h3>
+            <h2>VEGETARIANA</h2>
+            <h3>PIZZAS AL CARBÓN</h3>
+            <a href="" id="button-banner"><h4>PEDIR AHORA</h4></a>
+          </article>
+        </section>
+        <section id="banner-home3">
+          <article id="main-lookup">
+          <h3>POPULAR!</h3>
+          <h2>MUZZARELLA</h2>
           <h3>PIZZAS AL CARBÓN</h3>
           <a href="" id="button-banner"><h4>PEDIR AHORA</h4></a>
         </article>
-        <i class="fa-solid fa-angles-right"></i>
-        <section id="slider-banner">     
-          <i class="fa-solid fa-circle"></i>
-          <i class="fa-solid fa-circle"></i>
-          <i class="fa-solid fa-circle"></i>
-        </section>   
       </section>
+      </section>
+      <!-- <button role="button"> <i class="fa-solid fa-angles-left flechas-banner"></i> </button>
+      <button role="button">  <i class="fa-solid fa-angles-right flechas-banner"></i> </button> -->
+        <section id="slider-banner" class="puntos">     
+          <button role="button"> <i class="fa-solid fa-circle punto activo"></i> </button>
+          <button role="button"> <i class="fa-solid fa-circle punto"></i> </button>
+          <button role="button"> <i class="fa-solid fa-circle punto"></i> </button>
+        </section>   
+    </section>
 
       <section id="nuestras-pizzas">
         <h2> NUESTRAS <span>PIZZAS</span> </h2>
         <section id="cards-pizzas">
           <article>
             <h4 id="borde-nuevo">NUEVA!</h4>
-            <img src="image/pizza_moderna.png">
+            <img src="image/pizza_moderna.png" class="pizza-rotate">
             <h3>MODERNA</h3>
             <p>Salsa, muzza, rúcula, jamón crudo, tomates deshidratados, parmesano</p>
             <a href=""> <h4 id="button-pedir">PEDIR</h4> </a>
           </article>
           <article>
             <h4 id="borde-nuevo">NUEVA!</h4>
-            <img src="image/pizza_vegetariana.png" alt="">
+            <img src="image/pizza_vegetariana.png" alt="" class="pizza-rotate">
             <h3>VEGETARIANA</h3>
             <p>Salsa, muzza, berenjena asada, tomates cherrys, aceitunas y hojas de albahaca</p>
             <a href=""> <h4 id="button-pedir">PEDIR</h4> </a>
           </article>
           <article class="pizzas-sin-nuevo">
-            <img src="image/pizza_napolitana.png" alt="">
+            <img src="image/pizza_napolitana.png" alt="" class="pizza-rotate">
             <h3>NAPOLITANA</h3>
             <p>Salsa, muzza, rodajas de tomate natural, aceite de oliva, ajo y orégano</p>
             <a href=""> <h4 id="button-pedir">PEDIR</h4> </a>
           </article>
           <article class="pizzas-sin-nuevo">
-            <img src="image/pizza_calabresa.png" alt="">
+            <img src="image/pizza_calabresa.png" alt="" class="pizza-rotate">
             <h3>CALABRESA</h3>
             <p>Salsa, muzza, longaniza a la calabresa, morrones, aceitunas verdes y orégano</p>
             <a href=""> <h4 id="button-pedir">PEDIR</h4> </a>
@@ -124,53 +146,53 @@
       <section id="nuestras-sucursales">
         <h2>NUESTRAS <span>SUCURSALES</span> </h2>
         <section id="cards-sucursales">
-          <article id="card-ayacucho">
+          <article id="card-ayacucho" class="">
             <h3>AYACUCHO 437</h3>
             <p>Lun a Sab: 09:00 a 23:00</p>
             <p>Dom: 19:00 a 23:00</p>            
-            <h4 id="button-info">MÁS INFO</h4>
+            <a href=""> <h4 id="button-info">MÁS INFO</h4> </a>
           </article>
           <article id="card-cabildo">
             <h3>CABILDO 3938</h3>
             <p>Lun a Dom: 10:00 a 23:00</p>
             <p>Dom: 19:00 a 23:00</p>            
-            <h4 id="button-info">MÁS INFO</h4>
+            <a href=""> <h4 id="button-info">MÁS INFO</h4> </a>
           </article>
           <article id="card-dorrego">
             <h3>DORREGO 875</h3>
             <p>Lun a Vie: 11:00 a 22:00</p>
             <p>Sab y Dom: 12:00 a 22:00</p>            
-            <h4 id="button-info">MÁS INFO</h4>
+            <a href=""> <h4 id="button-info">MÁS INFO</h4> </a>
           </article>
           <article id="card-guemes">
             <h3>GUEMES 3965</h3>
             <p>Lun a Sab: 09:00 a 24:00</p>
             <p>Dom: 10:00 a 24:00</p>            
-            <h4 id="button-info">MÁS INFO</h4>
+            <a href=""> <h4 id="button-info">MÁS INFO</h4> </a>
           </article>
           <article id="card-pacheco">
             <h3>PACHECO 2228</h3>
             <p>Lun a Jue: 10:00 a 23:30</p>
             <p>Vie y Sab: 10:00 a 00:30</p>            
-            <h4 id="button-info">MÁS INFO</h4>
+            <a href=""> <h4 id="button-info">MÁS INFO</h4> </a>
           </article>
           <article id="card-pueyrredon">
             <h3>PUEYRREDÓN 1224 </h3>
             <p>Lun a Sab: 12:00 a 22:30</p>
             <p>Dom: 19:00 a 23:30</p>            
-            <h4 id="button-info">MÁS INFO</h4>
+            <a href=""> <h4 id="button-info">MÁS INFO</h4> </a>
           </article>
           <article id="card-sarmiento">
             <h3>SARMIENTO 745</h3>
             <p>Lun a Sab: 09:00 a 23:00</p>
             <p>Dom: 19:00 a 23:00</p>            
-            <h4 id="button-info">MÁS INFO</h4>
+            <a href=""> <h4 id="button-info">MÁS INFO</h4> </a>
           </article>
           <article id="card-zeballos">
             <h3>ZEBALLOS 1046</h3>
             <p>Lun a Sab: 09:00 a 23:00</p>
             <p>Dom: 19:00 a 23:00</p>            
-            <h4 id="button-info">MÁS INFO</h4>
+            <a href=""> <h4 id="button-info">MÁS INFO</h4> </a>
           </article>
         </section>
       </section>
