@@ -14,7 +14,11 @@ const expresiones = {
 const campos = {
 	nombre: false,
 	correo: false,
-    celular: false
+    celular: false,
+	comensales: false,
+	sucursal: false,
+	horario: false,
+	fecha: false
 }
 
 const validarCampo = (expresion, input, campo) => {
@@ -46,7 +50,7 @@ const validarCamposVacios = () => {
     });
 };  
 
-const validarSelect = (selectElement, containerId) => {
+const validarSelect = (selectElement, containerId, campo) => {
     const selectedOption = selectElement.value;
     const containerElement = document.getElementById(containerId);
     if (selectedOption === '0') {
@@ -55,31 +59,37 @@ const validarSelect = (selectElement, containerId) => {
         document.querySelector(`#${containerId} i` ).classList.add('fa-circle-xmark');
         document.querySelector(`#${containerId} i` ).classList.remove('fa-circle-check');
         document.querySelector(`#${containerId} .validacion-error` ).classList.add('validacion-error-activo');
+		campos[campo] = false;
     } else {
         containerElement.classList.remove('form-container-incorrecto');
         containerElement.classList.add('form-container-correcto');
         document.querySelector(`#${containerId} i` ).classList.add('fa-circle-check');
         document.querySelector(`#${containerId} i` ).classList.remove('fa-circle-xmark');
         document.querySelector(`#${containerId} .validacion-error` ).classList.remove('validacion-error-activo');
+		campos[campo] = true;
     }
 };
 
 const validarFecha = () => {
-    const fechaSeleccionada = fechaInput.value;
-    if (fechaSeleccionada === '') {
-        document.getElementById(`form-fecha`).classList.add('form-container-incorrecto');
-	    document.getElementById(`form-fecha`).classList.remove('form-container-correcto');
-        document.querySelector(`#form-fecha i` ).classList.add('fa-circle-xmark');
-        document.querySelector(`#form-fecha i` ).classList.remove('fa-circle-check');
-		document.querySelector(`#form-fecha .validacion-error`).classList.add('validacion-error-activo');
-    } else {
-        document.getElementById('form-fecha').classList.remove('form-container-incorrecto');
-        document.getElementById('form-fecha').classList.add('form-container-correcto');
-        document.querySelector(`#form-fecha i` ).classList.add('fa-circle-check');
-        document.querySelector(`#form-fecha i` ).classList.remove('fa-circle-xmark');
-        document.querySelector(`#form-fecha .validacion-error`).classList.remove('validacion-error-activo');
-    }
-};
+	const fechaSeleccionada = fechaInput.value.trim();
+	const fechaActual = new Date();
+	
+	if (fechaSeleccionada === '' || new Date(fechaSeleccionada) < fechaActual) {
+	  document.getElementById('form-fecha').classList.add('form-container-incorrecto');
+	  document.getElementById('form-fecha').classList.remove('form-container-correcto');
+	  document.querySelector(`#form-fecha i`).classList.add('fa-circle-xmark');
+	  document.querySelector(`#form-fecha i`).classList.remove('fa-circle-check');
+	  document.querySelector(`#form-fecha .validacion-error`).classList.add('validacion-error-activo');
+	  campos.fecha = false;
+	} else {
+	  document.getElementById('form-fecha').classList.remove('form-container-incorrecto');
+	  document.getElementById('form-fecha').classList.add('form-container-correcto');
+	  document.querySelector(`#form-fecha i`).classList.add('fa-circle-check');
+	  document.querySelector(`#form-fecha i`).classList.remove('fa-circle-xmark');
+	  document.querySelector(`#form-fecha .validacion-error`).classList.remove('validacion-error-activo');
+	  campos.fecha = true;
+	}
+  }; 
 
 const validarFormulario = (e) => {
 	switch (e.target.name) {
@@ -114,13 +124,13 @@ formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
 
 	const terminos = document.getElementById('terminos');
-    if (validarCamposVacios() || validarSelect(comensalesSelect, 'form-comensales') || validarSelect(sucursalesSelect, 'form-sucursales') || validarSelect(horarioSelect, 'form-horario')  || validarFecha() || !terminos.checked )  {
+    if (validarCamposVacios() || validarSelect(comensalesSelect, 'form-comensales', 'comensales') || validarSelect(sucursalesSelect, 'form-sucursales', 'sucursal') || validarSelect(horarioSelect, 'form-horario', 'horario')  || validarFecha() || !terminos.checked )  {
         document.getElementById('mensaje-error').classList.add('mensaje-error-activo');
         document.getElementById('terminos').classList.add('terminos-estado');
         return; 
     }
 
-	if (campos.nombre && campos.correo && campos.celular && terminos.checked){
+	if (campos.nombre && campos.correo && campos.celular && campos.fecha && campos.comensales && campos.sucursal && campos.horario  && terminos.checked){
 		formulario.reset();
 
         document.getElementById('terminos').classList.remove('terminos-estado');
