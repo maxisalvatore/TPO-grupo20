@@ -74,7 +74,7 @@ const validarFecha = () => {
 	const fechaSeleccionada = fechaInput.value.trim();
 	const fechaActual = new Date();
 	
-	if (fechaSeleccionada === '' || new Date(fechaSeleccionada) < fechaActual) {
+	if (fechaSeleccionada === '' || new Date(fechaSeleccionada) <= fechaActual) {
 	  document.getElementById('form-fecha').classList.add('form-container-incorrecto');
 	  document.getElementById('form-fecha').classList.remove('form-container-correcto');
 	  document.querySelector(`#form-fecha i`).classList.add('fa-circle-xmark');
