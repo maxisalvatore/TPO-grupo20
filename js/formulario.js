@@ -72,22 +72,28 @@ const validarSelect = (selectElement, containerId, campo) => {
 
 const validarFecha = () => {
 	const fechaSeleccionada = fechaInput.value.trim();
-	const fechaActual = new Date();
+	const opciones = { year: 'numeric', month: 'numeric', day: 'numeric' };
+	var fechaActual = new Date();
+	var year = fechaActual.toLocaleString("default",{year: "numeric"});
+	var month = fechaActual.toLocaleString("default",{month: "2-digit"});
+	var day = fechaActual.toLocaleString("default",{day: "2-digit"});
+	var fechaFormat = year + "-" + month + "-" + day;
 	
-	if (fechaSeleccionada === '' || new Date(fechaSeleccionada) < fechaActual) {
-	  document.getElementById('form-fecha').classList.add('form-container-incorrecto');
-	  document.getElementById('form-fecha').classList.remove('form-container-correcto');
-	  document.querySelector(`#form-fecha i`).classList.add('fa-circle-xmark');
-	  document.querySelector(`#form-fecha i`).classList.remove('fa-circle-check');
-	  document.querySelector(`#form-fecha .validacion-error`).classList.add('validacion-error-activo');
-	  campos.fecha = false;
-	} else {
-	  document.getElementById('form-fecha').classList.remove('form-container-incorrecto');
-	  document.getElementById('form-fecha').classList.add('form-container-correcto');
-	  document.querySelector(`#form-fecha i`).classList.add('fa-circle-check');
-	  document.querySelector(`#form-fecha i`).classList.remove('fa-circle-xmark');
-	  document.querySelector(`#form-fecha .validacion-error`).classList.remove('validacion-error-activo');
-	  campos.fecha = true;
+	if (fechaSeleccionada === '' || new Date(fechaSeleccionada) < new Date(fechaFormat)) {
+		document.getElementById('form-fecha').classList.add('form-container-incorrecto');
+		document.getElementById('form-fecha').classList.remove('form-container-correcto');
+		document.querySelector(`#form-fecha i`).classList.add('fa-circle-xmark');
+		document.querySelector(`#form-fecha i`).classList.remove('fa-circle-check');
+		document.querySelector(`#form-fecha .validacion-error`).classList.add('validacion-error-activo');
+		campos.fecha = false;
+		
+	  } else {
+		document.getElementById('form-fecha').classList.remove('form-container-incorrecto');
+		document.getElementById('form-fecha').classList.add('form-container-correcto');
+		document.querySelector(`#form-fecha i`).classList.add('fa-circle-check');
+		document.querySelector(`#form-fecha i`).classList.remove('fa-circle-xmark');
+		document.querySelector(`#form-fecha .validacion-error`).classList.remove('validacion-error-activo');
+		campos.fecha = true;
 	}
   }; 
 

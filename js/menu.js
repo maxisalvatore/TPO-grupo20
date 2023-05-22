@@ -8,15 +8,11 @@ const menuSecciones = document.querySelector(".section-menu");
 const menu1 = menuSecciones.querySelector("#menu1");
 const menu2 = menuSecciones.querySelector("#menu2");
 const menu3 = menuSecciones.querySelector("#menu3");
-const menu4 = menuSecciones.querySelector("#menu4");
-const menu5 = menuSecciones.querySelector("#menu5");
 
 const menu = {
   "Pizzas Especiales" : menu1,
   "Pizzas Clásicas": menu2,
   "Nuestras Pizzas": menu3,
-  "Sin Muzzarella": menu4,
-  "Sin Gluten": menu5
 };
 
 menu2.classList.add("active");

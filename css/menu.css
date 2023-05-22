@@ -489,7 +489,7 @@ footer li a:hover {
   height: 240px;
 } 
 
-#menu1, #menu2, #menu3, #menu4, #menu5{
+#menu1, #menu2, #menu3{
   display: none;
 }
 
@@ -505,13 +505,6 @@ footer li a:hover {
   display: flex;
 }
 
-#menu4.active{
-  display: flex;
-}
-
-#menu5.active{
-  display: flex;
-}
   
 /* Media query */
   
@@ -610,6 +603,6 @@ footer li a:hover {
     padding-bottom: 0;
   }
   #banner-menu {
-    background-position: 67% 10%;
+    background-image: url(../image/banner-productos-450.jpg);
   }
 }
