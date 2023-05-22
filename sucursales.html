@@ -1,57 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link css -->
     <link rel="stylesheet" href="./css/sucursales.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <!-- Íconos Fontawesome -->
+    <link rel="icon" href="./image/favicons.ico" type="image/x-icon">
+    <!-- Tipografía Adobe Fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/kex2fts.css">
+    <!-- Tipografía Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Gloria+Hallelujah&family=Roboto:ital,wght@0,700;0,900;1,100;1,900&display=swap" rel="stylesheet">  
-
-    <link rel="icon" href="./image/favicon_pizzeria.ico" type="image/x-icon">
-    <!-- Tipografía Adobe Fonts -->
-    <link rel="stylesheet" href="https://use.typekit.net/kex2fts.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Roboto:wght@700&display=swap" rel="stylesheet">
     <!-- Íconos Fontawesome -->
-    <script src="https://kit.fontawesome.com/9558700994.js" crossorigin="anonymous"></script>
-
     <script src="https://kit.fontawesome.com/a421c1d509.js" crossorigin="anonymous"></script>
-    
-    
-  
-
-    <title>Nuestras Sucursales</title>
+    <!-- Animaciones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <title>Sucursales</title>
 </head>
 <body>
 
- <header>
+  <header>
     <section id="logo-header">
-      <img src="./image/logo_pizzeria.png" alt="logo pizzeria">
-      <h1> <a href="/index.html" id="nombre-pizzeria">Nombre</a> </h1>
+      <a href="./index.html" class="logo-png"> <img src="./image/logo_pizzeria.png" alt="logo pizzeria" /> </a>
+      <h2><a href="./index.html" class="nombre-pizzeria">PIZZA JAT</a></h2>
     </section>
     <nav>
-        <ul class="nav-menu">
-            <li> <a href="./index.html"> HOME </a> </li>
-            <li> <a href="./menu.html"> MENÚ </a> </li>
-            <li> <a href="./sucursales.html"> SUCURSALES </a> </li>
-            <li> <a href="./about.html"> SOBRE NOSOTROS </a> </li>
-            <li> <a href="./reservas.html" id="reservas-header"> RESERVAS </a> </li>
-        </ul>
-        <img src="./image/toggle_header.png" alt="" id="toggle-header">
-    </nav>    
- </header>
+      <ul class="nav-menu">
+        <li><a href="./index.html"> HOME </a></li>
+        <li><a href="./menu.html"> MENÚ </a></li>
+        <li><a href="./sucursales.html"> SUCURSALES </a></li>
+        <li><a href="./about.html"> SOBRE NOSOTROS </a></li>
+        <li><a href="./reservas.html" id="reservas-header"> RESERVAS </a></li>
+      </ul>
+      <i class="fa-solid fa-bars" id="toggle-header"></i>
+    </nav>
+  </header>
 
- <main>
-
-        <section id="banner-home">
+  <main>
+        <section id="banner-sucursales">
           <h1>SUCURSALES</h1>
         </section>
           
         <section>
-              <section class="contenedor3">
+              <section class="contenedor3" id="sucursal-ayacucho">
                 <section>
                     <h2 class="h2">Encontranos en</h2>
                     <h3 class="h3">BALVANERA</h3>
@@ -75,13 +70,13 @@
               
               
           <section>
-                    <section class="contenedor3">
+                    <section class="contenedor3" id="sucursal-cabildo">
 
                         <section>
                             <h2 class="h2">Encontranos en</h2>
                             <h3 class="h3">BELGRANO</h3>
                         </section>  
-                            <p class="flex-item"><i class="fa-solid fa-location-dot"></i> Cabildo 3938 </p>
+                            <p class="flex-item"><i class="fa-solid fa-location-dot"></i> Cabildo 938 </p>
                             <p class="flex-item">Ciudad Autónoma de Buenos Aires</p>
                             <p class="flex-item"> <i class="fa-solid fa-motorcycle"></i></i> Delivery</p>
                             <p class="flex-item"> <i class="fa-solid fa-briefcase"></i> Retiro en Local</p>
@@ -100,7 +95,7 @@
 
                       
           <section>
-                        <section class="contenedor3">
+                        <section class="contenedor3" id="sucursal-dorrego">
 
                               <section>
                                  <h2 class="h2">Encontranos en</h2>
@@ -126,7 +121,7 @@
                               </section>
                                      
           <section>
-                        <section class="contenedor3">.
+                        <section class="contenedor3" id="sucursal-guemes">.
 
                                 <section>
                                       <h2 class="h2">Encontranos en</h2>
@@ -152,7 +147,7 @@
 
 
           <section>
-                          <section class="contenedor3">.
+                          <section class="contenedor3" id="sucursal-pacheco">.
               
                                   <section>
                                         <h2 class="h2">Encontranos en</h2>
@@ -181,7 +176,7 @@
 
           
           <section>
-                          <section class="contenedor3">.
+                          <section class="contenedor3" id="sucursal-pueyrredon">.
                         
                                   <section>
                                           <h2 class="h2">Encontranos en</h2>
@@ -205,45 +200,40 @@
                                     <section>
                                       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.3087349427565!2d-58.4032805!3d-34.596353799999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca91ab054db3%3A0xe6ac165f05c68b6a!2sAv.%20Pueyrred%C3%B3n%201224%2C%20C1118AAP%20CABA!5e0!3m2!1ses!2sar!4v1683394380704!5m2!1ses!2sar" width="100%" height="300" style="border:1;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>     
                                     </section>   
-                                             
-                                             
+  </main>
 
-</main>
+  <footer>
+    <section id="logo-footer">
+      <a href="./index.html" class="logo-png"> <img src="./image/logo_pizzeria.png" alt="logo pizzeria" /> </a>
+      <h2><a href="./index.html" class="nombre-pizzeria">PIZZA JAT</a></h2>
+    </section>
 
-<footer>
-  <section id="logo-footer">
-      <img src="./image/logo_pizzeria.png" alt="logo pizzeria" id="logo">
-      <h1> <a href="../index.html/index.html" id="nombre-pizzeria">Nombre</a> </h1>
-  </section>
-
-   <nav class="nav-footer nav-contacto">
+    <nav class="nav-footer nav-contacto">
       <h3>CONTACTO</h3>
-        <ul>
-          <li> <i class="fa-solid fa-location-dot"></i> <span> Dirección, Buenos Aires </span> </li>
-          <li> <i class="fa-solid fa-envelope"></i> <span> mail@google.com </span> </li>
-          <li> <i class="fa-solid fa-phone"></i> <span> 1144556677 </span> </li>
-        </ul>
-   </nav>
-
-   <nav class="nav-footer nav-seguinos">
-      <h3>SEGUINOS</h3>
-        <ul>
-          <li> <a href="https://www.facebook.com/" target="_blank"> <i class="fa-brands fa-facebook"></i> </a> </li>
-          <li> <a href="https://www.instagram.com/" target="_blank"> <i class="fa-brands fa-square-instagram"></i> </a> </li>
-          <li> <a href="https://twitter.com/" target="_blank"> <i class="fa-brands fa-twitter"></i> </a> </li>
+      <ul>
+        <li> <i class="fa-solid fa-location-dot"></i><span> Cabildo 938, Buenos Aires </span> </li>
+        <li> <i class="fa-solid fa-envelope"></i><span> contacto@pizzajat.com </span> </li>
+        <li> <i class="fa-solid fa-phone"></i><span class="telefono">1144556677</span> </li>
       </ul>
-   </nav>
+    </nav>
+
+    <nav class="nav-footer nav-seguinos">
+      <h3>SEGUINOS</h3>
+      <ul>
+        <li> <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a> </li>
+        <li> <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a> </li>
+        <li> <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a> </li>
+      </ul>
+    </nav>
 
     <nav class="nav-footer nav-legales">
-        <h3>LEGALES</h3>
-          <ul>
-            <li> <a href="index.html"> <i class="fa-solid fa-angle-right"></i> Términos y Condiciones </a> </li>
-          </ul>
-    </nav>       
+      <h3>LEGALES</h3>
+      <ul>
+        <li> <a href="./index.html"><i class="fa-solid fa-angle-right"></i> Términos y Condiciones</a> </li>
+      </ul>
+    </nav>
   </footer>
 
-
-  <script src="./js/index.js"></script>
-
-  </body>
+  <script src="./js/header.js"></script>
+</body>
 </html>

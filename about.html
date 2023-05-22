@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ABOUT US</title>
+    <!-- Link css -->
     <link rel="stylesheet" type="text/css" href="css/about.css">
     <!-- Favicon -->
     <link rel="icon" href="image/favicons.ico" type="image/x-icon" />
@@ -19,29 +19,35 @@
     <script src="https://kit.fontawesome.com/79e6d3a47c.js" crossorigin="anonymous"></script>
     <!--animacionCSS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-
+    <title>Sobre Nosotros</title>
 </head>
 <body>
     <header>
-        <section id="logo-header">
-          <img src="image/logo_pizzeria.png" alt="logo pizzeria" />
-          <h1><a href="/index.html" id="nombre-pizzeria">Nombre</a></h1>
-        </section>
-        <nav>
-          <ul class="nav-menu">
-            <li><a href="./index.html"> HOME </a></li>
-            <li><a href="./menu.html"> MENÚ </a></li>
-            <li><a href="./sucursales.html"> SUCURSALES </a></li>
-            <li><a href="./about.html"> SOBRE NOSOTROS </a></li>
-            <li><a href="./reservas.html" id="reservas-header"> RESERVAS </a></li>
-          </ul>
-          <img src="./image/toggle_header.png" alt="" id="toggle-header" />
-        </nav>
-      </header>
+      <section id="logo-header">
+        <a href="./index.html" class="logo-png"> <img src="./image/logo_pizzeria.png" alt="logo pizzeria" /> </a>
+        <h2><a href="./index.html" class="nombre-pizzeria">PIZZA JAT</a></h2>
+      </section>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="./index.html"> HOME </a></li>
+          <li><a href="./menu.html"> MENÚ </a></li>
+          <li><a href="./sucursales.html"> SUCURSALES </a></li>
+          <li><a href="./about.html"> SOBRE NOSOTROS </a></li>
+          <li><a href="./reservas.html" id="reservas-header"> RESERVAS </a></li>
+        </ul>
+        <i class="fa-solid fa-bars" id="toggle-header"></i>
+      </nav>
+    </header>
+
+<main>
+    <section id="banner-about">
+      <h2>Sobre Nosotros</h2>
+    </section>
+
 <section class="container">
     <section class="row">
             <section class="header">
-                <h1>Pizzeria "Nombre"</h1>
+                <h1>PIZZA <span>JAT</span> </h1>
                 <p>Es un negocio familiar, surgido de la pasión por la cocina italiana y la fusión de sabores mediterráneos que le ofrece un viaje a Italia a través de los sentidos</p>
             </section>
         <section class="content">
@@ -63,58 +69,40 @@
         </section>
     </section>
 </section>
-  </article>
-<footer>
+</main>
+
+  <footer>
     <section id="logo-footer">
-      <img src="./image/logo_pizzeria.png" alt="logo pizzeria" id="logo" />
-      <h1><a href="./index.html" id="nombre-pizzeria">Nombre</a></h1>
+      <a href="./index.html" class="logo-png"> <img src="./image/logo_pizzeria.png" alt="logo pizzeria" /> </a>
+      <h2><a href="./index.html" class="nombre-pizzeria">PIZZA JAT</a></h2>
     </section>
 
     <nav class="nav-footer nav-contacto">
       <h3>CONTACTO</h3>
       <ul>
-        <li>
-          <i class="fa-solid fa-location-dot"></i>
-          <span> Dirección, Buenos Aires </span>
-        </li>
-        <li>
-          <i class="fa-solid fa-envelope"></i> <span> mail@google.com </span>
-        </li>
-        <li><i class="fa-solid fa-phone"></i> <span> 1144556677 </span></li>
+        <li> <i class="fa-solid fa-location-dot"></i><span> Cabildo 938, Buenos Aires </span> </li>
+        <li> <i class="fa-solid fa-envelope"></i><span> contacto@pizzajat.com </span> </li>
+        <li> <i class="fa-solid fa-phone"></i><span class="telefono">1144556677</span> </li>
       </ul>
     </nav>
 
     <nav class="nav-footer nav-seguinos">
       <h3>SEGUINOS</h3>
       <ul>
-        <li>
-          <a href="https://www.facebook.com/" target="_blank">
-            <i class="fa-brands fa-facebook"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/" target="_blank">
-            <i class="fa-brands fa-square-instagram"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://twitter.com/" target="_blank">
-            <i class="fa-brands fa-twitter"></i>
-          </a>
-        </li>
+        <li> <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a> </li>
+        <li> <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a> </li>
+        <li> <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a> </li>
       </ul>
     </nav>
 
     <nav class="nav-footer nav-legales">
       <h3>LEGALES</h3>
       <ul>
-        <li>
-          <a href="./index.html">
-            <i class="fa-solid fa-angle-right"></i> Términos y Condiciones
-          </a>
-        </li>
+        <li> <a href="./index.html"><i class="fa-solid fa-angle-right"></i> Términos y Condiciones</a> </li>
       </ul>
     </nav>
   </footer>
+
+  <script src="./js/header.js"></script>
 </body>
 </html>

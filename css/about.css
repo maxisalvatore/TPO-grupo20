@@ -1,245 +1,296 @@
-*{
-    margin: 0px;    
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
 /* Estilos header */
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    z-index: 2;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0px 0px 10px grey;
-    height: 80px;
-    top: 0;
-    padding: 0 12.5%;
-  }
-  
-  #logo-header {
-    display: flex;
-    align-items: center;
-  }
-  
-  #nombre-pizzeria {
-    font-family: "komu-b", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 3rem;
-    text-decoration: none;
-    color: #232323;
-    margin-left: 0.5rem;
-  }
-  
-  nav ul {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    list-style: none;
-  }
-  
-  .nav-menu.open {
-    height: auto;
-  }
-  
-  header li a {
-    font-family: "brandon-grotesque", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    text-decoration: none;
-    padding: 0 1.35rem;
-    color: #232323;
-  }
-  
-  header li:hover {
-    transform: scale(1.05, 1.05);
-  }
-  
-  header a:hover {
-    color: #c4122f;
-    font-weight: bold;
-  }
-  
-  #reservas-header {
-    border: #c4122f solid 2px;
-    border-radius: 6px;
-    padding: 0.25rem 1rem;
-    margin-left: 1.35rem;
-  }
-  
-  #toggle-header {
-    display: none;
-    cursor: pointer;
-  }
-  
-  #toggle-header:active {
-    scale: 0.9;
-  }
-.container{
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  z-index: 2;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 10px grey;
+  height: 80px;
+  opacity: 0.98;
+  top: 0;
+  padding: 0 12.5%;
+}
+
+#logo-header {
+  display: flex;
+  align-items: center;
+}
+
+.logo-png {
+  height: 42px;
+}
+
+.nombre-pizzeria {
+  font-family: "komu-b", sans-serif;
+  font-weight: 400;
+  font-size: 3rem;
+  text-decoration: none;
+  color: #232323;
+  margin-left: 0.5rem;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav-menu.open {
+  height: auto;
+}
+
+header li a {
+  font-family: "brandon-grotesque", sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  color: #232323;
+  padding: 0 1.35rem;
+}
+
+header li:hover {
+  transform: scale(1.05, 1.05);
+}
+
+header li a:hover {
+  font-weight: bold;
+  color: #c4122f;
+}
+
+#reservas-header {
+  border: #c4122f solid 2px;
+  border-radius: 6px;
+  padding: 0.25rem 1rem;
+  margin-left: 1.35rem;
+}
+
+#toggle-header {
+  display: none;
+  cursor: pointer;
+  font-size: 2.5rem;
+}
+
+#toggle-header:active {
+  scale: 0.9;
+}
+
+
+/* Estilos main */
+
+#banner-about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../image/banner-about.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 30%;
+  width: 100%;
+  min-height: 500px;
+  padding: 0;
+}
+
+#banner-about h2 {
+  font-family: "komu-b", sans-serif;
+  font-weight: 400;
+  font-size: 5rem;
+  text-align: center;
+  color: white;
+  animation: bounceInLeft;
+  animation-duration: 1.5s;
+}
+
+.container {
+  width: 100%;
 
 }
-.container .row{
-    width: 80%;
-    margin: auto;
+
+.container .row {
+  width: 77%;
+  margin: auto;
 
 }
-.container .row .header{
-    width: 60%;
-    text-align: center;
-    margin: auto;
+
+.container .row .header {
+  text-align: center;
+  width: 60%;
+  margin: auto;
 }
-.container .row .header h1{
-    padding-top: 30px;
-    font-size: 45px;
-    color: #FF6347;
+
+.container .row .header h1 {
+  font-family: "league-gothic", sans-serif;
+  font-weight: 400;
+  font-size: 3.5rem;
+  color: #232323;
+  padding-top: 55px;
 }
-.container .row .header p{
-    margin-top: 15px;
-    font-size: 18px;
-    line-height: 1.5;
-    color: #6e6e6e;
+
+.container .row .header h1 span{
+  font-family: "league-gothic", sans-serif;
+  font-weight: 400;
+  font-size: 3.5rem;
+  color: #f5101a;
 }
-.content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
+
+.container .row .header p {
+  font-family: "brandon-grotesque", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #898b89;
+  line-height: 1.5;
+  margin-top: 15px;
 }
-.content .card{
-    flex: 1;
-    margin: 50px 20px;
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
-    background-color: #FF6347;
-    border-radius: 30px;
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 }
-.content .card img{
-    width: 100%;
-    height: auto;
-    border-radius: 30px;
+
+.content .card {
+  flex: 1;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+  background-color: #FF6347;
+  background-color: #e92727f3;
+  border-radius: 30px;
+  margin: 50px 20px;
 }
-.content .card h4{
-    margin-top: 10px;
-    margin-left: 10px;
-    font-size: 18px;
+
+.content .card img {
+  border-radius: 30px;
+  width: 100%;
+  height: auto;
 }
-.content .card p{
-    font-size: 15px;
-    color:rgb(236, 208, 170);
-    line-height: 1.5;
-    padding: 10px;
+
+.content .card h4 {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-left: 10px;
 }
+
+.content .card p {
+  font-size: 15px;
+  color: rgb(236, 208, 170);
+  line-height: 1.5;
+  padding: 10px;
+}
+
 /* Estilos footer */
 
 footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    background-color: #f3f2ef;
-    height: 175px;
-    padding: 0 12.5%;
-  }
-  
-  .nav-footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-wrap: wrap;
-    font-family: "brandon-grotesque", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 0.9rem;
-    color: #202020;
-  }
-  
-  .nav-footer ul {
-    display: block;
-  }
-  
-  .nav-seguinos {
-    align-items: center;
-  }
-  
-  #logo-footer {
-    display: flex;
-    align-items: center;
-  }
-  
-  .nav-legales {
-    padding-bottom: 3.2rem;
-  }
-  
-  footer li {
-    padding-top: 0.3rem;
-    font-family: "brandon-grotesque", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 0.9rem;
-  }
-  
-  footer li a {
-    text-decoration: none;
-    color: #232323;
-  }
-  
-  footer a:hover {
-    color: #c4122f;
-  }
-  
-  .fa-brands:hover {
-    transform: scale(1.3, 1.3);
-  }
-  
-  .fa-brands {
-    color: #db1d2d;
-    font-size: 17px;
-  }
-  
-  .fa-solid {
-    color: #db1d2d;
-    font-size: 14px;
-  }
-  
-  .nav-contacto span {
-    margin-left: 0.4rem;
-  }
-  
-  .fa-location-dot {
-    margin-left: 0.15rem;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #f3f2ef;
+  height: 175px;
+  padding: 0 12.5%;
+}
+
+.nav-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-family: "brandon-grotesque", sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #202020;
+}
+
+.nav-footer h3 {
+  font-family: "brandon-grotesque", sans-serif;
+  font-weight: 500;
+  font-size: 1.17em;
+  font-weight: bold;
+  color: #202020;
+}
+
+.nav-footer ul {
+  list-style: none;
+}
+
+.nav-seguinos {
+  align-items: center;
+}
+
+#logo-footer {
+  display: flex;
+  align-items: center;
+}
+
+.nav-legales {
+  padding-bottom: 3.21rem;
+}
+
+footer li {
+  padding-top: 0.3rem;
+}
+
+footer span, footer li a {
+  font-family: "brandon-grotesque", sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+footer li a {
+  text-decoration: none;
+  color: #232323;
+}
+
+footer li a:hover {
+  color: #c4122f;
+}
+
+.fa-brands,.fa-solid {
+  font-size: 17px;
+  color: #db1d2d;
+}
+
+.fa-brands:hover {
+  transform: scale(1.3, 1.3);
+}
+
+.fa-solid {
+  font-size: 14px;
+}
+
+.fa-location-dot {
+  margin-left: 0.15rem;
+}
+
+.nav-contacto span {
+  margin-left: 0.4rem;
+}
+
+.nav-contacto .telefono {
+  margin-left: 0.60rem;
+}
+
+
 @media screen and (max-width:900px) {
-    .content{
-        flex-direction: column;
-    }
-    
+  .content {
+    flex-direction: column;
+  }
 }
 
 /* MEDIAS TODO */
-@media only screen and (max-width: 1410px){
-  #nuestras-pizzas{
-    padding: 180px 3% 30px 3%;
-  }
-  #nuestras-sucursales{
-    padding: 180px 3% 30px 3%;
-  }
-}
 
 @media only screen and (max-width: 1200px) {
-  header {
+  header, footer, #banner-about {
     padding: 0 3%;
   }
-  footer {
-    padding: 0 3%;
-  }
-  #banner-home {
-    padding: 0 3%;
-  }
-  .fa-angles-right, .fa-angles-left{
-    display: none;
+  .container .row {
+    width: 97.5%;
   }
 }
 
@@ -257,90 +308,60 @@ footer {
     overflow: hidden;
     transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
+
   header nav li {
     padding: 1rem 0;
   }
+
   #reservas-header {
     border: #c4122f solid 0px;
     padding: 0.25rem 3rem;
     margin: 0;
   }
+
   header li a:hover {
     background-color: #c4122f;
-    color: white;
     border-radius: 6px;
+    color: white;
     padding: 0.25rem 3rem;
   }
+
   #toggle-header {
     display: flex;
   }
+
   footer {
-    padding: 2rem 3%;
     height: 300px;
+    padding: 2rem 3%;
   }
+
   #logo-footer {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
-    align-items: center;
   }
-  #banner-home {
-    background-image: url(../image/banner-home-900.jpg);
-  }
-}
 
-@media only screen and (max-width: 650px) {
-  #banner-home {
-    background-image: url(../image/banner-home-650.jpg);
-    align-items: flex-start;
-    padding-top: 55px;
-  }
-  #seccion-app{
-    height: 500px;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    padding-top: 30px;
-  }
-  #celular{
-    order: 2;
-    align-self: center;
-    margin-top: auto;
-  }
-  #descarga-app{
-    align-items: center;
+  .content .card {
+    margin: 50px 15px;
   }
 }
 
 @media only screen and (max-width: 450px) {
   footer {
     padding: 1.5rem 12.5%;
-    height: 300px;
   }
-  #logo-footer {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    align-items: center;
-  }
+
   .nav-legales {
     width: 100%;
     padding-bottom: 0;
   }
+
+  #banner-about {
+    background-position: 70% 30%;
+  }
+
+  .container .row {
+    width: 100%;
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

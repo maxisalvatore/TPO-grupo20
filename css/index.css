@@ -19,6 +19,7 @@ header {
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 0px 10px grey;
   height: 80px;
+  opacity: 0.98;
   top: 0;
   padding: 0 12.5%;
 }
@@ -28,20 +29,21 @@ header {
   align-items: center;
 }
 
-#nombre-pizzeria {
+.logo-png{
+  height: 42px;
+}
+
+.nombre-pizzeria {
   font-family: "komu-b", sans-serif;
   font-weight: 400;
-  font-style: normal;
   font-size: 3rem;
   text-decoration: none;
   color: #232323;
   margin-left: 0.5rem;
 }
 
-nav ul {
+header nav ul {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
   list-style: none;
 }
 
@@ -52,17 +54,16 @@ nav ul {
 header li a {
   font-family: "brandon-grotesque", sans-serif;
   font-weight: 400;
-  font-style: normal;
   text-decoration: none;
-  padding: 0 1.35rem;
   color: #232323;
+  padding: 0 1.35rem;
 }
 
 header li:hover {
   transform: scale(1.05, 1.05);
 }
 
-header a:hover {
+header li a:hover {
   color: #c4122f;
   font-weight: bold;
 }
@@ -77,6 +78,7 @@ header a:hover {
 #toggle-header {
   display: none;
   cursor: pointer;
+  font-size: 2.5rem;
 }
 
 #toggle-header:active {
@@ -102,13 +104,12 @@ footer {
   flex-wrap: wrap;
   font-family: "brandon-grotesque", sans-serif;
   font-weight: 500;
-  font-style: normal;
   font-size: 0.9rem;
   color: #202020;
 }
 
 .nav-footer ul {
-  display: block;
+  list-style: none;
 }
 
 .nav-seguinos {
@@ -121,15 +122,11 @@ footer {
 }
 
 .nav-legales {
-  padding-bottom: 3.2rem;
+  padding-bottom: 3.21rem;
 }
 
 footer li {
   padding-top: 0.3rem;
-  font-family: "brandon-grotesque", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 0.9rem;
 }
 
 footer li a {
@@ -137,31 +134,35 @@ footer li a {
   color: #232323;
 }
 
-footer a:hover {
+footer li a:hover {
   color: #c4122f;
+}
+
+.fa-brands, .fa-solid{
+  font-size: 17px;
+  color: #db1d2d;
 }
 
 .fa-brands:hover {
   transform: scale(1.3, 1.3);
 }
 
-.fa-brands {
-  color: #db1d2d;
-  font-size: 17px;
+.fa-solid {
+  font-size: 14px;
 }
 
-.fa-solid {
-  color: #db1d2d;
-  font-size: 14px;
+.fa-location-dot {
+  margin-left: 0.15rem;
 }
 
 .nav-contacto span {
   margin-left: 0.4rem;
 }
 
-.fa-location-dot {
-  margin-left: 0.15rem;
+.nav-contacto .telefono{
+  margin-left: 0.60rem;
 }
+
 
 /* Estilos banner */
 
@@ -182,41 +183,25 @@ footer a:hover {
   scroll-behavior: smooth;
 }
 
-#banner-home {
-  width: calc( 100% / 3);
-  min-height: 500px;
+.banner-home {
+  display: flex;
+  align-items: center;
   background-image: url(../image/banner-home.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  padding: 0 4.166%;
-  display: flex;
-  align-items: center;
+  background-position: 50% 62%;
+  width: calc( 100% / 3);
+  min-height: 500px;
+  padding: 0 calc( 12.5% / 3);
   transition: all 0.4s ease;
 }
 
-#banner-home2 {
-  width: calc( 100% / 3);
-  min-height: 500px;
+.banner2 {
   background-image: url(../image/banner-home2.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  padding: 0 4.166%;
-  display: flex;
-  align-items: center;
 }
 
-#banner-home3 {
-  width: calc( 100% / 3);
-  min-height: 500px;
+.banner3 {
   background-image: url(../image/banner-home3.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  padding: 0 4.166%;
-  display: flex;
-  align-items: center;
 }
 
 .main-lookup-animation{
@@ -224,49 +209,46 @@ footer a:hover {
   animation-duration: 1.5s;
 }
 
-#main-lookup h2 {
+.main-lookup h2 {
   font-family: "komu-b", sans-serif;
   font-weight: 400;
-  font-style: normal;
   font-size: 5rem;
   color: white;
 }
 
-#main-lookup h3 {
+.main-lookup h3 {
   font-family: "brandon-grotesque", sans-serif;
   font-weight: 500;
-  font-style: normal;
   font-size: 1.15rem;
   color: white;
 }
 
-#main-lookup h4 {
+.main-lookup h4 {
   font-family: "brandon-grotesque", sans-serif;
   font-weight: 700;
-  font-style: normal;
   font-size: 1rem;
   color: #ff0000;
   background-color: #ffca0e;
   text-align: center;
-  padding: 0.5rem 0;
-  margin-top: 1.15rem;
   width: 164px;
   border-radius: 6px;
+  padding: 0.5rem 0;
+  margin-top: 1.15rem;
 }
 
-#banner-home2 #main-lookup h4 {
+.banner2 .main-lookup h4 {
   color: #44720d;
 }
 
-#banner-home3 #main-lookup h4 {
+.banner3 .main-lookup h4 {
   color: #a23000;
 }
 
-#button-banner {
+.button-banner {
   text-decoration: none;
 }
 
-#button-banner h4:active {
+.button-banner h4:active {
   scale: 0.97;
 }
 
@@ -316,18 +298,17 @@ footer a:hover {
 /* Sección Nuestras Pizzas */
 
 #nuestras-pizzas{
+  text-align: center;
   min-height: 1240px;
   padding: 180px 12.5% 30px 12.5%;
-  text-align: center;
 }
 
 #nuestras-pizzas h2{
+  position: relative;
   font-family: "league-gothic", sans-serif;
   font-weight: 400;
-  font-style: normal;
   font-size: 3.5rem;
   color: #232323;
-  position: relative;
   bottom: 90px;
 }
 
@@ -344,15 +325,15 @@ footer a:hover {
 }
 
 #cards-pizzas article{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
     border-radius: 6px;
     background-color: rgb(243, 242, 239);
     box-shadow: 0px 5px 14.55px 0.45px rgba(0, 0, 0, 0.2);
     width: 332px;
     height: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
     padding-bottom: 7px;
     transition: 0.6s;
 }
@@ -363,14 +344,13 @@ footer a:hover {
 }
 
 
-#cards-pizzas .pizzas-sin-nuevo{
+#cards-pizzas .sin-etiqueta{
   padding-top: 41px;
 }
 
 #cards-pizzas article h3{
   font-family: "league-gothic", sans-serif;
   font-weight: 400;
-  font-style: normal;
   font-size: 2rem;
   height: 25px;
 }
@@ -378,7 +358,6 @@ footer a:hover {
 #cards-pizzas article h4{
   font-family: "brandon-grotesque", sans-serif;
   font-weight: 700;
-  font-style: normal;
   font-size: 1rem;
   border: rgb(221, 36, 47) solid 2px;
   border-radius: 8px;
@@ -389,12 +368,12 @@ footer a:hover {
   text-decoration: none;
 }
 
-#cards-pizzas article #borde-nuevo{
+#cards-pizzas article .etiqueta-nueva{
   align-self: flex-start;
   margin-left: 15px;
 }
 
-#cards-pizzas article #button-pedir{
+#cards-pizzas article .button-pedir{
   color: white;
   background-color: #ec333b;
   padding: 0 1.8rem;
@@ -403,7 +382,6 @@ footer a:hover {
 #cards-pizzas article p{
   font-family: "brandon-grotesque", sans-serif;
   font-weight: 300;
-  font-style: normal;
   font-size: 1rem;
 }
 
@@ -415,11 +393,11 @@ footer a:hover {
 /* Seccion App */
 
 #seccion-app{
-  background-color: #f3f2ef;
-  height: 300px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  background-color: #f3f2ef;
+  height: 300px;
 }
 
 #descarga-app{
@@ -431,7 +409,6 @@ footer a:hover {
 #descarga-app h2{
   font-family: "league-gothic", sans-serif;
   font-weight: 400;
-  font-style: normal;
   font-size: 3.5rem;
   color: #232323;
 }
@@ -439,7 +416,6 @@ footer a:hover {
 #descarga-app h2 span{
   font-family: "league-gothic", sans-serif;
   font-weight: 400;
-  font-style: normal;
   font-size: 3.5rem;
   color: #f5101a;
 }
@@ -447,7 +423,6 @@ footer a:hover {
 #descarga-app h3{
   font-family: "league-gothic", sans-serif;
   font-weight: 400;
-  font-style: normal;
   font-size: 1.4rem;
   color: #232323;
 }
@@ -455,7 +430,6 @@ footer a:hover {
 #descarga-app h4{
   font-family: "brandon-grotesque", sans-serif;
   font-weight: 300;
-  font-style: normal;
   font-size: 0.95rem;
   color: #000000;
 }
@@ -469,9 +443,10 @@ footer a:hover {
 }
 
 #celular{
-  height: 280px;
   align-self: flex-end;
+  height: 280px;
 }
+
 
 /* Sección Nuestras Sucursales */
 
@@ -484,7 +459,6 @@ footer a:hover {
 #nuestras-sucursales h2{
   font-family: "league-gothic", sans-serif;
   font-weight: 400;
-  font-style: normal;
   font-size: 3.5rem;
   color: #232323;
   position: relative;
@@ -510,127 +484,65 @@ footer a:hover {
     align-items: center;
     border-radius: 6px;
     background-color: rgb(243, 242, 239);
+    background-size: 360px;
     box-shadow: 0px 5px 14.55px 0.45px rgba(0, 0, 0, 0.2);
+    transition: 0.6s;
+    opacity: 0.85;
     min-width: 332px;
     min-height: 500px;
     padding-bottom: 20px;
-    transition: 0.6s;
 }
 
 #cards-sucursales article:hover{
-  scale: 1.03;
+  background-size: 340px;
   box-shadow: 0px 3px 14.55px 0.45px rgba(0, 0, 0, 0.6);
+  scale: 1.03;
+  opacity: 1;
 }
 
 #card-ayacucho{
   background-image: url(../image/sucursal_ayacucho.jpg);
-  opacity: 0.85;
-  background-size: 360px;
-}
-
-#card-ayacucho:hover{
-  background-image: url(../image/sucursal_ayacucho.jpg);
-  opacity: 1;
-  background-size: 340px;
 }
 
 #card-cabildo{
   background-image: url(../image/sucursal_cabildo.jpg);
-  opacity: 0.85;
-  background-size: 360px;
-}
-
-#card-cabildo:hover{
-  background-image: url(../image/sucursal_cabildo.jpg);
-  opacity: 1;
-  background-size: 340px;
 }
 
 #card-dorrego{
   background-image: url(../image/sucursal_dorrego.jpg);
-  opacity: 0.85;
-  background-size: 360px;
-}
-
-#card-dorrego:hover{
-  background-image: url(../image/sucursal_dorrego.jpg);
-  opacity: 1;
-  background-size: 340px;
 }
 
 #card-guemes{
   background-image: url(../image/sucursal_guemes.jpg);
-  opacity: 0.85;
-  background-size: 360px;
-}
-
-#card-guemes:hover{
-  background-image: url(../image/sucursal_guemes.jpg);
-  opacity: 1;
-  background-size: 340px;
 }
 
 #card-pacheco{
   background-image: url(../image/sucursal_pacheco.jpg);
-  opacity: 0.85;
-  background-size: 360px;
-}
-
-#card-pacheco:hover{
-  background-image: url(../image/sucursal_pacheco.jpg);
-  opacity: 1;
-  background-size: 340px;
 }
 
 #card-pueyrredon{
   background-image: url(../image/sucursal_pueyrredon.jpg);
-  opacity: 0.85;
-  background-size: 360px;
-}
-
-#card-pueyrredon:hover{
-  background-image: url(../image/sucursal_pueyrredon.jpg);
-  opacity: 1;
-  background-size: 340px;
 }
 
 #card-sarmiento{
   background-image: url(../image/sucursal_sarmiento.jpg);
-  opacity: 0.85;
-  background-size: 360px;
-}
-
-#card-sarmiento:hover{
-  background-image: url(../image/sucursal_sarmiento.jpg);
-  opacity: 1;
-  background-size: 340px;
 }
 
 #card-zeballos{
   background-image: url(../image/sucursal_zeballos.jpg);
-  opacity: 0.85;
-  background-size: 360px;
 }
-
-#card-zeballos:hover{
-  background-image: url(../image/sucursal_zeballos.jpg);
-  opacity: 1;
-  background-size: 340px;
-} 
 
 #cards-sucursales article h3{
   font-family: "league-gothic", sans-serif;
   font-weight: 400;
-  font-style: normal;
   font-size: 2rem;
   color: white;
   margin-bottom: 0.3rem;
 }
 
-#cards-sucursales article #button-info{
+#cards-sucursales article .button-info{
   font-family: "brandon-grotesque", sans-serif;
   font-weight: 700;
-  font-style: normal;
   font-size: 1rem;
   color: white;
   background-color: #ec333b;
@@ -643,7 +555,6 @@ footer a:hover {
 #cards-sucursales article p{
   font-family: "brandon-grotesque", sans-serif;
   font-weight: 300;
-  font-style: normal;
   font-size: 1rem;
   color: white;
   margin-bottom: 0.2rem;
@@ -654,26 +565,19 @@ footer a:hover {
 }
 
 
-
 /* Media query */
 
 @media only screen and (max-width: 1410px){
-  #nuestras-pizzas{
-    padding: 180px 3% 30px 3%;
-  }
-  #nuestras-sucursales{
+  #nuestras-pizzas, #nuestras-sucursales{
     padding: 180px 3% 30px 3%;
   }
 }
 
 @media only screen and (max-width: 1200px) {
-  header {
+  header, footer {
     padding: 0 3%;
   }
-  footer {
-    padding: 0 3%;
-  }
-  #banner-home, #banner-home2, #banner-home3 {
+  .banner-home {
     padding: 0 1%;
   }
   .flechas-banner{
@@ -714,47 +618,43 @@ footer a:hover {
     display: flex;
   }
   footer {
-    padding: 2rem 3%;
     height: 300px;
+    padding: 2rem 3%;
   }
   #logo-footer {
     display: flex;
     justify-content: center;
-    width: 100%;
     align-items: center;
+    width: 100%;
   }
-  #banner-home {
+  .banner-home {
     background-image: url(../image/banner-home-900.jpg);
   }
-  #banner-home2 {
+  .banner2 {
     background-image: url(../image/banner-home2-900.jpg);
   }
-  #banner-home3 {
+  .banner3 {
     background-image: url(../image/banner-home3-900.jpg);
   }
 }
 
 @media only screen and (max-width: 650px) {
-  #banner-home {
+  .banner-home {
+    align-items: flex-start;
     background-image: url(../image/banner-home-650.jpg);
-    align-items: flex-start;
     padding-top: 55px;
   }
-  #banner-home2 {
+  .banner2 {
     background-image: url(../image/banner-home2-650.jpg);
-    align-items: flex-start;
-    padding-top: 55px;
   }
-  #banner-home3 {
+  .banner3 {
     background-image: url(../image/banner-home3-650.jpg);
-    align-items: flex-start;
-    padding-top: 55px;
   }
   #seccion-app{
-    height: 500px;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    height: 500px;
     padding-top: 30px;
   }
   #celular{
@@ -770,13 +670,6 @@ footer a:hover {
 @media only screen and (max-width: 450px) {
   footer {
     padding: 1.5rem 12.5%;
-    height: 300px;
-  }
-  #logo-footer {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    align-items: center;
   }
   .nav-legales {
     width: 100%;

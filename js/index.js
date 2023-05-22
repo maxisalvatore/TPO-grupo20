@@ -1,25 +1,71 @@
-// Dropdown Menu
-const toggleHeader = document.querySelector("#toggle-header")
-const dropDownMenu = document.querySelector(".nav-menu")
-toggleHeader.onclick = function() {
-    dropDownMenu.classList.toggle("open")
+//Carousel
+const carousel = document.querySelector('.carousel');
+const flechasIzquierda = document.querySelector('.fa-angles-left');
+const flechasDerecha = document.querySelector('.fa-angles-right');
+const puntos = document.querySelectorAll('.punto');
+
+let currentIndex = 0;
+const totalBanners = 3;
+let timer 
+
+function actualizarPuntos() {
+  puntos.forEach(punto => punto.classList.remove('activo'));
+  puntos[currentIndex].classList.add('activo');
 }
 
+function moverCarousel() {
+  const movimiento = currentIndex * -(100 / totalBanners);
+  carousel.style.transform = `translateX(${movimiento}%)`;
+}
 
-//Carousel
-const carousel    = document.querySelector('.carousel')
-const punto     = document.querySelectorAll('.punto')
+function iniciarTimer() {
+  timer = setInterval(() => {
+    if (currentIndex === totalBanners - 1) {
+        currentIndex = 0;
+      } else {
+        currentIndex = currentIndex + 1;
+      }      
+    moverCarousel();
+    actualizarPuntos();
+  }, 6500);
+}
 
-punto.forEach( ( listaPuntos , i )=> {
-    punto[i].addEventListener('click',()=>{
-        let posicion  = i
-        let movimiento = posicion * -(100/3)
+function detenerTimer() {
+  clearInterval(timer);
+}
 
-        carousel.style.transform = `translateX(${ movimiento }%)`
+flechasIzquierda.addEventListener('click', () => {
+   if (currentIndex === 0) {
+        currentIndex = totalBanners - 1;
+      } else {
+        currentIndex = currentIndex - 1;
+      }      
+  moverCarousel();
+  actualizarPuntos();
+  detenerTimer();
+  iniciarTimer();
+});
 
-        punto.forEach( ( listaPuntos , i )=>{
-            punto[i].classList.remove('activo')
-        })
-        punto[i].classList.add('activo')
-    })
-})
+flechasDerecha.addEventListener('click', () => {
+    if (currentIndex === totalBanners - 1) {
+        currentIndex = 0;
+      } else {
+        currentIndex = currentIndex + 1;
+      }   
+  moverCarousel();
+  actualizarPuntos();
+  detenerTimer();
+  iniciarTimer();
+});
+
+puntos.forEach((punto, index) => {
+  punto.addEventListener('click', () => {
+    currentIndex = index;
+    moverCarousel();
+    actualizarPuntos();
+    detenerTimer();
+    iniciarTimer();
+  });
+});
+
+iniciarTimer();

@@ -1,0 +1,447 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0; 
+  }  
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    z-index: 2;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px grey;
+    height: 80px;
+    opacity: 0.98;
+    top: 0;
+    padding: 0 12.5%;
+    margin: 0;
+}
+
+#logo-header {
+    display: flex;
+    align-items: center;
+}
+
+.logo-png {
+    height: 42px;
+}
+
+header h2, footer h2 {
+    line-height: normal;
+    margin: 0;
+}
+
+.nombre-pizzeria {
+    font-family: "komu-b", sans-serif;
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: normal;
+    text-decoration: none;
+    color: #232323;
+    margin-left: 0.5rem;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu.open {
+    height: auto;
+}
+
+header li a {
+    font-family: "brandon-grotesque", sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    line-height: normal;
+    padding: 0 1.35rem;
+    color: #232323;
+}
+
+header li:hover {
+    transform: scale(1.05, 1.05);
+}
+
+header li a:hover {
+    color: #c4122f;
+    font-weight: bold;
+}
+
+#reservas-header {
+    border: #c4122f solid 2px;
+    border-radius: 6px;
+    padding: 0.25rem 1rem;
+    margin-left: 1.35rem;
+}
+
+#toggle-header {
+    display: none;
+    cursor: pointer;
+    font-size: 2.5rem;
+}
+
+#toggle-header:active {
+    scale: 0.9;
+}
+
+#banner-reservas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../image/banner-reservas.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 500px;
+    padding: 0;
+}
+
+#banner-reservas h1 {
+    font-family: "komu-b", sans-serif;
+    font-weight: 400;
+    font-size: 5rem;
+    line-height: normal;
+    color: white;
+    animation: bounceInLeft;
+    animation-duration: 1.5s;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #f3f2ef;
+    height: 175px;
+    box-sizing: border-box;
+    padding: 0 12.5%;
+    margin: 0;
+}
+
+.nav-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: "brandon-grotesque", sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    line-height: normal;
+    color: #202020;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-footer h3 {
+    font-family: "brandon-grotesque", sans-serif;
+    font-weight: 500;
+    font-size: 1.17em;
+    line-height: normal;
+    color: #202020;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-contacto h3 {
+    margin: 0;
+}
+
+.nav-seguinos {
+    align-items: center;
+}
+
+.nav-seguinos h3 {
+    margin: 0;
+}
+
+#logo-footer {
+    display: flex;
+    align-items: center;
+}
+
+.nav-legales {
+    padding-bottom: 3.21rem;
+}
+
+.nav-legales h3 {
+    margin: 0;
+}
+
+footer li {
+    padding-top: 0.3rem;
+}
+
+footer span, footer li a {
+    font-family: "brandon-grotesque", sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    line-height: normal;
+    padding-top: 0.3rem;
+}
+
+footer li a {
+    text-decoration: none;
+    color: #232323;
+    padding: 0;
+}
+
+footer li a:hover {
+    color: #c4122f;
+}
+
+.fa-brands, .fa-solid {
+    color: #db1d2d;
+    font-size: 17px;
+}
+
+.fa-brands:hover {
+    transform: scale(1.3, 1.3);
+}
+
+.fa-solid {
+    font-size: 14px;
+}
+
+.fa-location-dot {
+    margin-left: 0.15rem;
+}
+
+.nav-contacto span {
+    padding: 0;
+    margin-left: 0.4rem;
+}
+
+.nav-contacto .telefono{
+    margin-left: 0.60rem;
+}
+
+body{
+    margin: 0;
+}
+
+main{
+    margin: 0;
+}
+
+main h2 {
+    font-size: 45px;
+    font-family: "league-gothic", sans-serif;
+    font-weight: 400;
+    font-size: 3.5rem;
+    color: #232323;
+    text-align: center;
+    padding: 55px 3% 0 3%;
+}
+  
+main p {
+    font-family: "brandon-grotesque", sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: #898b89;
+    text-align: center;
+    padding: 0 3%;
+    margin-top: 15px;
+}
+
+main .container{
+    margin: 0;
+    padding: 0 12.5%;
+    max-width: 100%;
+}
+
+main .container2{
+    margin: 0;
+    padding: 0 12.5% 200px 12.5%;
+    max-width: 100%;
+}
+
+form .btn-primary{
+    background-color: #db1d2d;
+    border: #db1d2d;
+}
+
+.btn-primary:hover, .btn-primary:active, .btn-primary:visited{
+    background-color: #ff0015 !important;
+    border: #db1d2d;
+    scale: 1.02;
+    box-shadow: 3px 0px 10px rgba(163,163,163, 0.7);
+}
+
+.input{
+    position: relative;
+}
+
+.select{
+    position: relative;
+}
+
+.form-control{
+    transition: .3s ease all;
+}
+
+.validacion-estado{
+    opacity: 0;
+    position: absolute;
+    right: -30px;
+    bottom: 7px;
+    font-size: 1.4rem;
+}
+
+.terminos-estado{
+    border: 2px #c4122f solid !important;
+}
+
+.validacion-error{
+    display: none;
+    font-size: 1rem;
+    text-align: start;
+    margin: 0;
+    padding: 0;
+}
+
+.validacion-error-activo{
+    display: block;
+}
+
+.mensaje-error {
+    display: none;
+	border-radius: 3px;
+    color: #c4122f;
+	height: 45px;
+    padding: 0;
+}
+
+.mensaje-error-activo {
+	display: block;
+}
+
+.mensaje-error p {
+	margin: 0;
+    color: #c4122f;
+    text-align: start;
+    padding: 0;
+}
+
+.mensaje-exito {
+	display: none;
+    text-align: start;
+	color: #119200;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.mensaje-exito-activo {
+	display: block;
+}
+
+.form-container-correcto .validacion-estado {
+	color: #1ed12d;
+	opacity: 1;
+}
+
+.form-container-incorrecto .form-label {
+	color: #bb2929;
+}
+
+.form-container-incorrecto .validacion-estado {
+	color: #bb2929;
+	opacity: 1;
+}
+
+.form-container-incorrecto .form-input {
+	border: 3px solid #bb2929;
+}
+
+#app h3{
+    font-family: "brandon-grotesque", sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: #232323;
+    text-align: start;
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+    header, footer {
+        padding: 0 3%;
+    }
+    main .container{
+        padding: 0 3%;
+    }
+    main .container2{
+        padding: 0 3% 100px 3%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        height: 0;
+        line-height: normal;
+        background: #f3f2ef;
+        overflow: hidden;
+        transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        padding: 0;
+        margin: 0;
+    }
+    header nav li {
+        padding: 1rem 0;
+    }
+    #reservas-header {
+        border: #c4122f solid 0px;
+        padding: 0.25rem 3rem;
+        margin: 0;
+    }
+    header li a:hover {
+        background-color: #c4122f;
+        color: white;
+        border-radius: 6px;
+        padding: 0.25rem 3rem;
+    }
+    #toggle-header {
+        display: flex;
+    }
+    footer {
+        height: 300px;
+        padding: 2rem 3%;
+    }
+    #logo-footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    #banner-reservas {
+        background-image: url(../image/banner-reservas-450.jpg);
+    }
+    footer {
+        padding: 1.5rem 12.5%;
+    }
+    .nav-legales {
+        width: 100%;
+        padding-bottom: 0;
+    }
+}

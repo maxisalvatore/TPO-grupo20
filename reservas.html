@@ -1,133 +1,255 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- Link css -->
-        <link rel="stylesheet" href="css/reservas.css" />
-        <!-- Favicon -->
-        <link rel="icon" href="image/favicons.ico" type="image/x-icon" />
-        <!-- Tipografía Adobe Fonts -->
-        <link rel="stylesheet" href="https://use.typekit.net/kex2fts.css" />
-        <!-- Íconos Fontawesome -->
-        <script
-          src="https://kit.fontawesome.com/9558700994.js"
-          crossorigin="anonymous"
-        ></script>
-        <title>Pizzeria</title>
-      </head>
-      <body>
-        <header>
-          <section id="logo-header">
-            <img src="image/logo_pizzeria.png" alt="logo pizzeria" />
-            <h1><a href="/index.html" id="nombre-pizzeria">Nombre</a></h1>
-          </section>
-          <nav>
-            <ul class="nav-menu">
-              <li><a href="./index.html"> HOME </a></li>
-              <li><a href="./menu.html"> MENÚ </a></li>
-              <li><a href="./sucursales.html"> SUCURSALES </a></li>
-              <li><a href="./about.html"> SOBRE NOSOTROS </a></li>
-              <li><a href="./reservas.html" id="reservas-header"> RESERVAS </a></li>
-            </ul>
-            <img src="./image/toggle_header.png" alt="" id="toggle-header" />
-          </nav>
-          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-        </header>
-    
-<main>
-    <form>
-        <div class="mb-3">
-          <label for="nombreyapellido" class="form-label">Nombre y Apellido:</label>
-          <input type="name" class="form-control" id="nombreyapellido" aria-describedby="nombreyapellido">
-          
-        </div>
-        <select class="form-select" aria-label="Default select example">
-            <option selected>Cantidad de comensales:</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-        </select>
-        <select class="form-select" aria-label="Default select example">
-          <option selected>Lugar elegido:</option>
-          <option value="Adentro">Interior (No Fumador)</option>
-          <option value="Vereda">Exterior (Fumador)</option>
-          <option value="Patio Cubierto">Patio Cubierto (No fumador)</option>
-          <option value="Terraza">Terraza (No Fumador)</option>
-        </select>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Link css -->
+  <link rel="stylesheet" href="./css/reservas.css" />
+  <!-- Favicon -->
+  <link rel="icon" href="./image/favicons.ico" type="image/x-icon" />
+  <!-- Tipografía Adobe Fonts -->
+  <link rel="stylesheet" href="https://use.typekit.net/kex2fts.css" />
+  <!-- Animaciones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- Íconos Fontawesome -->
+  <script src="https://kit.fontawesome.com/a421c1d509.js" crossorigin="anonymous"></script>
+  <!-- Link Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <title>Reservas</title>
+</head>
 
-        <div class="mb-3">
-            <label for="horario" class="form-label">Hora de reserva:</label>
-            <input type="text" class="form-control" id="horario">
+<body>
+  <header>
+    <section id="logo-header">
+      <a href="./index.html" class="logo-png"> <img src="./image/logo_pizzeria.png" alt="logo pizzeria" /> </a>
+      <h2><a href="./index.html" class="nombre-pizzeria">PIZZA JAT</a></h2>
+    </section>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="./index.html"> HOME </a></li>
+        <li><a href="./menu.html"> MENÚ </a></li>
+        <li><a href="./sucursales.html"> SUCURSALES </a></li>
+        <li><a href="./about.html"> SOBRE NOSOTROS </a></li>
+        <li><a href="./reservas.html" id="reservas-header"> RESERVAS </a></li>
+      </ul>
+      <i class="fa-solid fa-bars" id="toggle-header"></i>
+    </nav>
+  </header>
+
+  <main>
+    <section id="banner-reservas">
+      <h1>RESERVAS</h1>
+    </section>
+
+    <h2> Reservá online o llámanos al 011 4455-6677</h2>
+    <p id="descripcion-titulo">Rellena el formulario y confirmaremos tu reserva lo antes posible!</p>
+
+    <div class="container">
+      <form action="" class="row g-3 mt-3" id="formulario">
+        <div class="col-12 form-container" id="form-nombre">
+          <label for="nombre" class="form-label">Nombre y Apellido:</label>
+          <div class="input">
+            <input type="text" class="form-control form-input" id="nombre" name="nombre">
+            <i class="fa-solid fa-circle-xmark validacion-estado"></i>
+          </div>
+          <p class="validacion-error">El nombre solo puede contener letras y espacios</p>
+        </div>
+
+        <div class="col-12 form-container" id="form-correo">
+          <label for="email" class="form-label">Email:</label>
+          <div class="input">
+            <input type="email" class="form-control form-input" id="correo" name="correo">
+            <i class="fa-solid fa-circle-xmark validacion-estado"></i>
+          </div>
+          <p class="validacion-error">El nombre del correo solo puede contener letras, números o símbolos, por ejemplo: ejemplo@gmail.com</p>
+        </div>
+
+        <div class="col-12 form-container" id="form-celular">
+          <label class="form-label" for="celular">Celular:</label>
+          <div class="input">
+            <input type="number" class="form-control form-input" id="celular" name="celular">
+            <i class="fa-solid fa-circle-xmark validacion-estado"></i>
+          </div>
+          <p class="validacion-error">El celular solo puede contener números</p>
+        </div>
+
+        <div class="col-12 form-container" id="form-comensales">
+          <label for="comensales" class="form-label">Cantidad de comensales:</label>
+          <div class="select">
+            <select class="form-select form-input" id="comensales">
+              <option value="0" selected>Seleccionar cantidad</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+            <i class="fa-solid fa-circle-xmark validacion-estado"></i>
+          </div>
+          <p class="validacion-error">Seleccione una cantidad</p>
+        </div>
+
+        <div class="col-12 form-container" id="form-sucursales">
+          <label for="sucursal" class="form-label">Sucursal:</label>
+          <div class="select">
+            <select class="form-select form-input" id="sucursales">
+              <option value="0" selected>Seleccionar sucursal</option>
+              <option value="1">Ayacucho 437</option>
+              <option value="2">Cabildo 938</option>
+              <option value="3">Dorrego 875</option>
+              <option value="4">Guemes 3965</option>
+              <option value="5">Pacheco 2228</option>
+              <option value="6">Pueyrredón 1224</option>
+              <option value="7">Sarmiento 745</option>
+              <option value="8">Zeballos 1046</option>
+            </select>
+            <i class="fa-solid fa-circle-xmark validacion-estado"></i>
+          </div>
+          <p class="validacion-error">Seleccione una sucursal</p>
+        </div>
+
+        <div class="col-12 form-container2" id="form-fecha">
+          <label for="fecha" class="form-label">Fecha:</label>
+          <div class="select">
+            <input type="date" class="form-control form-input" id="fecha">
+            <i class="fa-solid fa-circle-xmark validacion-estado"></i>
+         </div>
+          <p class="validacion-error">Seleccione una fecha</p>
+        </div>
+
+        <div class="col-12 form-container" id="form-horario">
+          <label for="horario" class="form-label">Hora de reserva:</label>
+          <div class="select">
+            <select class="form-select form-input" id="horario">
+              <option value="0" selected>Seleccionar horario</option>
+              <option value="1">11:00</option>
+              <option value="2">12:00</option>
+              <option value="3">13:00</option>
+              <option value="4">14:00</option>
+              <option value="5">20:00</option>
+              <option value="6">21:00</option>
+              <option value="7">22:00</option>
+              <option value="8">23:00</option>
+            </select>
+            <i class="fa-solid fa-circle-xmark validacion-estado"></i>
+          </div>
+          <p class="validacion-error">Seleccione un horario</p>
+        </div>
+
+        <div class="col-12 form-container2" id="form-terminos">
+          <div class="form-check">
+            <label class="form-check-label" for="terminos">Acepto términos y condiciones</label>
+            <input type="checkbox" class="form-check-input terminos" id="terminos" name="terminos">
+          </div>
+        </div>
+
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary"> Enviar </button>
+          <p class="mensaje-exito" id="mensaje-exito">Formulario enviado exitosamente!</p>
+        </div>
+
+        <div class="mensaje-error" id="mensaje-error">
+          <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+        </div>
+      </form>
+    </div>
+
+      <div class="container2">
+        <h2> Pedidos</h2>
+        <p id="pedidos">Hace tu pedido y lo entregaremos lo antes posible!</p>
+        <form action="" class="row g-3 mt-3" id="formulario">
+          <div class="col-12 form-container2" id="form-pizzas">
+            <label for="pizza" class="form-label">Pizzas:</label>
+            <div class="select">
+              <select class="form-select" id="pizza">
+                <option value="0" selected>Seleccionar una pizza</option>
+                <option value="1">Pizza moderna</option>
+                <option value="2">Pizza vegetariana</option>
+                <option value="3">Pizza napolitana</option>
+                <option value="4">Pizza calabresa</option>
+                <option value="5">Pizza doble muzza</option>
+                <option value="6">Pizza de rúcula</option>
+                <option value="7">Pizza de jamón</option>
+                <option value="8">Pizza fugazzeta </option>
+              </select>
+            </div>
           </div>
 
-        <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="sintacc">
-          <label class="form-check-label" for="sintacc">Sin TACC</label>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+          <div class="col-12 form-container2" id="form-direccion">
+            <label for="direccion" class="form-label">Direccion de envío:</label>
+            <div class="input">
+              <input type="text" class="form-control" id="direccion" name="direccion">
+            </div>
+          </div>
 
-</main>
-<footer>
+          <div class="col-12 form-container2" id="form-pago">
+            <label for="pago" class="form-label">Método de pago:</label>
+            <div class="select">
+              <select class="form-select" id="pago">
+                <option value="0" selected>Seleccionar un método de pago</option>
+                <option value="1">Efectivo</option>
+                <option value="2">Mercado pago</option>
+                <option value="3">Transferencia bancaria</option>
+                <option value="4">Criptomonedas</option>
+              </select>
+            </div>
+          </div>
+
+          <section id="app">
+            <h3>Aceptamos {{ monedas }}!!</h3>
+            <h3>Precio de Bitcoin en dólares: {{ bpi.USD.rate }}</h3>
+          </section>
+
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary"> Pedir </button>
+          </div>
+        </form>
+
+      </div>
+  </main>
+
+  <footer>
     <section id="logo-footer">
-      <img src="./image/logo_pizzeria.png" alt="logo pizzeria" id="logo" />
-      <h1><a href="./index.html" id="nombre-pizzeria">Nombre</a></h1>
+      <a href="./index.html" class="logo-png"> <img src="./image/logo_pizzeria.png" alt="logo pizzeria" /> </a>
+      <h2><a href="./index.html" class="nombre-pizzeria">PIZZA JAT</a></h2>
     </section>
 
     <nav class="nav-footer nav-contacto">
       <h3>CONTACTO</h3>
       <ul>
-        <li>
-          <i class="fa-solid fa-location-dot"></i>
-          <span> Dirección, Buenos Aires </span>
-        </li>
-        <li>
-          <i class="fa-solid fa-envelope"></i> <span> mail@google.com </span>
-        </li>
-        <li><i class="fa-solid fa-phone"></i> <span> 1144556677 </span></li>
+        <li> <i class="fa-solid fa-location-dot"></i><span> Cabildo 938, Buenos Aires </span> </li>
+        <li> <i class="fa-solid fa-envelope"></i><span> contacto@pizzajat.com </span> </li>
+        <li> <i class="fa-solid fa-phone"></i><span class="telefono">1144556677</span> </li>
       </ul>
     </nav>
 
     <nav class="nav-footer nav-seguinos">
       <h3>SEGUINOS</h3>
       <ul>
-        <li>
-          <a href="https://www.facebook.com/" target="_blank">
-            <i class="fa-brands fa-facebook"></i>
-          </a>
+        <li> <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a> </li>
+        <li> <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
         </li>
-        <li>
-          <a href="https://www.instagram.com/" target="_blank">
-            <i class="fa-brands fa-square-instagram"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://twitter.com/" target="_blank">
-            <i class="fa-brands fa-twitter"></i>
-          </a>
-        </li>
+        <li> <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a> </li>
       </ul>
     </nav>
 
     <nav class="nav-footer nav-legales">
       <h3>LEGALES</h3>
       <ul>
-        <li>
-          <a href="./index.html">
-            <i class="fa-solid fa-angle-right"></i> Términos y Condiciones
-          </a>
-        </li>
+        <li> <a href="./index.html"><i class="fa-solid fa-angle-right"></i> Términos y Condiciones</a> </li>
       </ul>
     </nav>
   </footer>
 
-    <script src="./js/index.js"></script>    
+  <script src="./js/formulario.js"></script>
+  <script src="./js/header.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="./js/apiBitcoins.js"></script>
 </body>
 </html>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
