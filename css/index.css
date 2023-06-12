@@ -42,6 +42,9 @@ header {
 }
 
 .nombre-pizzeria {
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
   font-family: "komu-b", sans-serif;
   font-weight: 400;
   font-size: 3rem;
