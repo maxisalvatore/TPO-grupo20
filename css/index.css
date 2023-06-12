@@ -33,6 +33,8 @@ header {
   display: flex;
   align-items: center;
   height: 38px;
+  margin: 0;
+  padding: 0;
 }
 
 .logo-png{
@@ -47,6 +49,8 @@ header {
   height: 38px;
   text-decoration: none;
   color: #232323;
+  padding: 0;
+  margin: 0;
   margin-left: 0.5rem;
 }
 
