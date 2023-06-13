@@ -31,17 +31,17 @@ header {
 }
 
 #logo-header h1{
-  display: flex;
-  align-items: center;
+  display: flex !important;
+  align-items: center !important;
   font-family: "komu-b", sans-serif;
   font-weight: 400;
   font-size: 3rem;
-  line-height: 38px;
-  height: 38px;
+  line-height: 38px !important;
+  height: 38px !important;
   margin: 0;
   padding: 0;
-  vertical-align: sub;
-  transform-origin: center;
+  vertical-align: middle !important;
+  transform-origin: center !important;
 }
 
 .logo-png{
@@ -49,17 +49,17 @@ header {
 }
 
 .nombre-pizzeria {
-  display: flex;
-  align-items: center;
-  vertical-align: sub;
+  display: flex !important;
+  align-items: center !important;
+  vertical-align: middle !important;
   font-family: "komu-b", sans-serif;
   font-weight: 400;
   font-size: 3rem;
-  line-height: 38px;
-  height: 38px;
+  line-height: 38px !important;
+  height: 38px !important;
   text-decoration: none;
   color: #232323;
-  transform-origin: center;
+  transform-origin: center !important;
   padding: 0;
   margin: 0;
   margin-left: 0.5rem;
