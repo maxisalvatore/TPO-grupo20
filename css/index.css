@@ -33,7 +33,7 @@ header {
 #logo-header h1{
   display: flex !important;
   align-items: center !important;
-  font-family: "komu-b", sans-serif;
+  font-family: "league-gothic", sans-serif;
   font-weight: 400;
   font-size: 3rem;
   line-height: 38px !important;
@@ -52,7 +52,7 @@ header {
   display: flex !important;
   align-items: center !important;
   vertical-align: middle !important;
-  font-family: "komu-b", sans-serif;
+  font-family: "league-gothic", sans-serif;
   font-weight: 400;
   font-size: 3rem;
   line-height: 38px !important;
