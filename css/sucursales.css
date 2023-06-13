@@ -23,8 +23,8 @@ header {
 }
 
 #logo-header h2{
-    display: flex;
-    align-items: center;
+    line-height: 20px;
+    vertical-align: middle;
 } 
 
 .logo-png {
@@ -32,12 +32,14 @@ header {
 }
 
 .nombre-pizzeria {
-    font-family: "komu-b", sans-serif;
+    font-family: "league-gothic", sans-serif;
     font-weight: 400;
     font-size: 3rem;
-    line-height: 2.3rem;
+    line-height: 20px;
+    vertical-align: middle;
     text-decoration: none;
     color: #232323;
+    padding-top: 0.4px;
     margin-left: 0.5rem;
 }
 
