@@ -360,7 +360,7 @@ footer li a:hover {
     }
 }
 
-@media only screen and (min-width: 360px) and (max-width: 414px) {
+@media only screen and (min-width: 300px) and (max-width: 414px) {
     .contenedor3 {
         display: flex;
         flex-direction: column;
